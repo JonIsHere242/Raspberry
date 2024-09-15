@@ -1,0 +1,1286 @@
+index,sector,difficulty,hardproblemprompt
+0,medical,normal regularly encountered,"Develop an open-ended problem in the medical sector:
+Create a predictive model using Python and the scikit-learn library that can identify high-risk patients with heart failure based on their historical health data. Assume you have access to a dataset containing patient records, including demographic information (age, sex), laboratory results (eGFR, serum creatinine), and medication history.
+Given a folder named 'Heart_Failure_Data' containing CSV files for each patient, where each file has the following structure:
+- PatientID (unique identifier)
+- Age
+- Sex (male/female)
+- eGFR (estimated glomerular filtration rate)
+- Serum Creatinine
+- Medication History (list of medications taken by the patient)
+Create a predictive model that can classify patients into high-risk and low-risk categories based on their likelihood of developing heart failure. The model should be trained using 80% of the data and validated on the remaining 20%. Evaluate the performance of the model using accuracy, precision, recall, F1-score, and ROC-AUC score.
+Your task is to:
+1. Import the necessary libraries.
+2. Load the dataset from the 'Heart_Failure_Data' folder.
+3. Preprocess the data by handling missing values, scaling/normalizing features as needed, and encoding categorical variables.
+4. Split the data into training and validation sets (80% for training and 20% for validation).
+5. Develop a predictive model using a suitable algorithm (e.g.,"
+1,science,very hard and challenging for anyone but the best to solve,"Develop an AI model to predict the structural integrity of bridges under various environmental conditions using a dataset from the Bridge Structural Integrity Dataset (BSID) available at `https://github.com/datasets/bridge-structural-integrity`. The dataset includes information on bridge geometry, materials, and environmental factors such as temperature, humidity, wind speed, and traffic load.
+**Objective:**
+Design an AI model that can accurately predict whether a bridge will fail under different environmental conditions. The model should be able to handle missing data, outliers, and non-linear relationships between variables.
+**Dataset:**
+*   Bridge Geometry: length, width, height, number of spans
+*   Materials: type (steel, concrete), age, condition
+*   Environmental Factors:
+    *   Temperature (°C)
+    *   Humidity (%)
+    *   Wind Speed (m/s)
+    *   Traffic Load (kg/m²)
+**Requirements:**
+1.  **Data Preprocessing:** Handle missing data using imputation techniques and remove outliers based on statistical methods.
+2.  **Feature Engineering:** Create new features that capture non-linear relationships between variables, such as polynomial transformations of temperature and wind speed.
+3.  **Model Selection:** Choose a suitable machine learning algorithm (e.g., Random Forest, Gradient Boosting, or Neural Networks) to predict bridge failure.
+4.  **Hyperparameter Tuning:** Perform hyperparameter tuning using cross-validation to optimize model performance.
+5.  **Model Evaluation:**"
+2,math,nearly impossible,"**Problem Statement:**
+Develop a mathematical model that simulates the dynamics of a complex network of interconnected power grids in a hypothetical region with diverse geographical and climatic conditions. The model should account for factors such as:
+- Time-varying demand due to diurnal patterns, seasonal changes, and random fluctuations
+- Weather-related disruptions (e.g., hurricanes, heatwaves)
+- Geographical constraints on transmission lines and substations
+- Aging infrastructure maintenance schedules
+- Renewable energy sources integration
+Using Python with libraries such as NetworkX for graph representation, Pandas for data manipulation, and Matplotlib/Seaborn for visualization, implement the following tasks:
+1.  Generate a synthetic dataset of power grid networks with approximately 50 nodes (substations) and 100 edges (transmission lines), reflecting realistic topological features.
+2.  Develop an algorithm to calculate time-varying demand at each node based on historical data or random processes that mimic real-world patterns.
+3.  Simulate the impact of weather-related disruptions on power grid stability, considering factors like reduced transmission capacity and increased demand.
+4.  Analyze the effects of aging infrastructure maintenance schedules on network resilience using metrics such as betweenness centrality and clustering coefficient.
+5.  Integrate renewable energy sources (e.g., solar, wind) into the power grid model, accounting for their intermittent nature and varying capacities.
+The solution should provide:
+- A comprehensive report detailing the mathematical model's development and its implementation in Python"
+3,coding,extremely challenging but theoretically possible,"Develop a predictive model using Python with the scikit-learn library that can forecast future stock prices based on historical data from Yahoo Finance. Given a folder named 'Stock_Price_Historicals' containing CSV files of stock tickers and their corresponding closing price over time, design a model that can predict the next 30 days' stock prices for each ticker.
+Assume the historical data spans at least two years with a daily frequency. Your solution should involve feature engineering, model selection, and hyperparameter tuning using cross-validation. You should also handle missing values appropriately and provide metrics to evaluate your model's performance.
+The CSV files in 'Stock_Price_Historicals' have the following structure:
+- Date (date of the closing price)
+- Close (the closing price)
+Your solution should output a new CSV file named 'Predictions.csv' containing the predicted stock prices for each ticker over the next 30 days. The CSV file should have the following columns:
+- Ticker
+- Predicted Price
+You can assume that the data is stored in the local machine and you have access to the Yahoo Finance API if needed.
+Note: You should use techniques like ARIMA, LSTM, or Prophet for your predictive model and ensure it's a production-ready solution. Also, handle any edge cases appropriately. 
+### Solution:
+```python
+import pandas as pd
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import Linear"
+4,factual,normal regularly encountered,"Here's a complex, open-ended problem in the factual sector:
+Develop an algorithm using Python with the pandas library to predict the stock price of Apple Inc. (AAPL) based on its historical stock prices and other relevant technical indicators such as Moving Averages, Relative Strength Index (RSI), Bollinger Bands, and Money Flow Index.
+Given a folder containing files with the names of {ticker}.csv with the csv containing the columns of Date, Open, High, Low, Close, Volume. Your task is to:
+1. Load the historical stock price data for AAPL from the 'AAPL_Stock_Data.csv' file in the 'Historical_Stock_Prices' folder.
+2. Calculate the Moving Averages (MA) with periods 50 and 200 using the pandas library's rolling function.
+3. Compute the Relative Strength Index (RSI) using a 14-period window.
+4. Create Bollinger Bands based on the 20-period MA and 2 standard deviations.
+5. Calculate the Money Flow Index (MFI).
+6. Use these technical indicators to train a machine learning model, such as an LSTM or ARIMA, to predict future stock prices for AAPL.
+7. Save the predicted stock prices in a new csv file called 'AAPL_Predicted_Stock_Prices.csv' in the 'Predictions' folder.
+Note: You may need to use other libraries like yfinance, mplfinance, or statsmodels to fetch or"
+5,heuristics,very hard and challenging for anyone but the best to solve,"In the book 'Advances in Artificial General Intelligence' there is a section on using evolutionary algorithms to optimize the parameters of cognitive architectures. Given a dataset of 1000 human brain scans, where each scan has 500 features (e.g., signal intensity in different regions), and the goal is to develop an AGI that can learn from these scans and perform tasks such as object recognition and navigation.
+Develop an evolutionary algorithm that optimizes the parameters of a cognitive architecture inspired by the neural networks found in the human brain. The architecture should be capable of learning from the brain scan data and achieving state-of-the-art performance on standard benchmark tasks for object recognition (e.g., ImageNet) and navigation (e.g., the ""Room-to-Room"" navigation task).
+The algorithm should use a population size of 1000, with each individual being a set of parameters for the cognitive architecture. The fitness function should evaluate the performance of each individual on the benchmark tasks.
+The code should be implemented in Python using the PyTorch library and the DEAP evolutionary computation framework. The dataset of brain scans is stored in the 'Brain_Scans' folder, with each file being a '.npz' archive containing the 500 features for that scan.
+Create a new directory called 'AGI_Project' to hold all the code and data, and create two csv files: 'object_recognition_results.csv' and 'navigation_results.csv', where each row represents the performance of an individual on one"
+6,medical,nearly impossible,"Design an AI system that can analyze medical imaging data from MRI and CT scans of patients with glioblastoma, a type of brain cancer. The goal is to identify tumors based on their texture and shape features extracted from the images.
+The system should be able to:
+1. Preprocess the images by applying filters to remove noise and artifacts.
+2. Extract relevant features from the images using techniques such as Gabor filtering, Local Binary Patterns (LBP), and Fractal analysis.
+3. Use a deep learning approach, specifically convolutional neural networks (CNNs), to classify the tumors into different stages of malignancy based on their feature vectors.
+4. Develop a user-friendly interface for radiologists to input patient information, view image slices, and receive classification results with confidence scores.
+5. Integrate with an existing electronic health record (EHR) system to retrieve relevant patient data and store the AI-generated reports.
+The dataset used should be the TCIA's LGG (Low-Grade Glioma) collection, which contains MRI and CT scans of patients with glioblastoma.
+**Required Deliverables:**
+* A Python notebook or Jupyter file that demonstrates the preprocessing and feature extraction steps using OpenCV and scikit-image libraries.
+* A PyTorch or TensorFlow implementation of the CNN model for classification.
+* A user interface design concept, preferably in HTML/CSS/JS, that meets the requirements specified above.
+* A brief report on how to integrate the AI system with"
+7,science,extremely challenging but theoretically possible,"Design an algorithm that identifies potential candidates for a new drug discovery pipeline using gene expression data from RNA sequencing experiments. The goal is to identify genes with similar expression patterns across different cell types and experimental conditions.
+Given a folder containing multiple .bam files, each corresponding to a single-cell RNA sequencing experiment (e.g., 'scRNA_seq_data'), you need to:
+1.  **Preprocess the BAM files**: Convert the BAM files into count matrices using tools like STAR or HTSeq.
+2.  **Normalize and log-transform the data**:
+    *   Normalize the count matrix by library size and use a suitable method (e.g., DESeq2, edgeR) to account for differences in sequencing depth.
+    *   Log-transform the normalized counts to improve interpretability.
+3.  **Identify variable genes**: Use a suitable method (e.g., variance stabilization, PCA) to identify the top N genes with the highest variability across different cell types and experimental conditions.
+4.  **Cluster similar expression patterns**:
+    *   Apply dimensionality reduction techniques (e.g., t-SNE, UMAP) to reduce the high-dimensional gene expression data into a lower-dimensional space suitable for clustering.
+    *   Use a clustering algorithm (e.g., k-means, hierarchical clustering) to group genes with similar expression patterns into clusters.
+5.  **Analyze cluster characteristics**:
+    *   Compute cluster-specific statistics (e.g., mean expression levels, variance).
+    *"
+8,math,normal regularly encountered,"Develop an algorithm using Python's NumPy and SciPy libraries to solve a 2D inverse kinematics problem involving a robotic arm with three joints. The robot's end-effector is constrained to move within the bounds of a rectangular region defined by the points (0, 0), (10, 0), (10, 5), and (0, 5) in its workspace.
+Given that each joint has one degree of freedom, and assuming the arm's joints are revolute (rotational), you should derive an analytical solution to find the joint angles that satisfy the constraint of keeping the end-effector within the specified rectangular region. 
+Your task is to create a Python script that:
+1.  Defines the function `inverse_kinematics` which takes as input the desired position of the end-effector (x, y) and outputs the joint angles.
+2.  Uses SciPy's `root_scalar` function to find the root of the equation that defines the relationship between joint angle and Cartesian coordinates for each joint.
+3.  Plots the workspace with the specified rectangular region using Matplotlib.
+4.  Creates a grid of points within the workspace, computes the corresponding joint angles for these points, and saves this data to a CSV file named 'joint_angles.csv'.
+Assume that the arm's joints are at fixed positions (0, 0), (1.5, 0), and (3, 2) relative to its base frame and have"
+9,coding,very hard and challenging for anyone but the best to solve,"Develop an AI that can simulate a realistic dynamic environment, such as a 3D urban landscape with moving vehicles, pedestrians, buildings, and other objects. The simulation should include real-time physics-based interactions between these entities.
+**Problem Statement:**
+Given a dataset of traffic patterns in a large city (available in the ""Traffic_Data"" folder), create an AI system using Python that can simulate a realistic dynamic environment, including:
+- A 3D urban landscape with moving vehicles and pedestrians
+- Realistic physics-based interactions between vehicles, pedestrians, buildings, and other objects
+- Dynamic lighting and weather effects
+- Real-time collision detection and response
+**Requirements:**
+* Use the Unity game engine (version 2020.3 or later) for the simulation environment
+* Utilize the C# programming language for scripting and AI development
+* Integrate with relevant libraries and frameworks, such as:
+	+ PyTorch or TensorFlow for deep learning and neural network implementations
+	+ OpenCV for computer vision tasks
+	+ NumPy and SciPy for scientific computing and numerical methods
+* The simulation should run at a minimum frame rate of 60 FPS on a mid-range GPU (e.g., NVIDIA GeForce GTX 1660 Ti)
+* The AI system should be capable of:
+	+ Predicting traffic patterns based on historical data
+	+ Optimizing traffic flow by adjusting traffic light timings and pedestrian crossings
+	+ Simulating emergency scenarios, such as accidents or natural disasters"
+10,factual,nearly impossible,"Here is a complex open-ended problem in the factual sector:
+In the book ""Machine Learning with Python"" there is a section on predicting stock prices using Long Short-Term Memory (LSTM) Recurrent Neural Networks. Given a folder that contains files with the names of {company}.csv with the csv containing the columns of 'Date', 'Open', 'High', 'Low', 'Close', 'Volume' and 'SMA50' which is the 50-day Simple Moving Average, can you replicate the LSTM model using the data in the 'Stock_Prediction' folder to predict the stock prices for the next 30 days? 
+Assuming a fixed window size of 120 trading days, create an LSTM network that takes into account both past stock prices and their moving averages. You should use the Keras library with a TensorFlow backend and implement early stopping to prevent overfitting.
+Also, include a section in your code to plot the predicted stock prices alongside the actual prices using Matplotlib.
+You can assume that the data is stored in the 'Data' folder which contains subfolders for each company. The folder structure should be as follows:
+```
+Stock_Prediction
+|--- Data
+    |--- Apple
+    |       |--- apple.csv
+    |--- Google
+    |       |--- google.csv
+    |--- Amazon
+    |       |--- amazon.csv
+```
+The csv files contain the historical stock prices for each company. You should write"
+11,heuristics,extremely challenging but theoretically possible,"#### Problem: Heuristics in Predicting Credit Defaults via Rule Extraction
+Develop a rule extraction framework using decision trees and a genetic algorithm in Python, leveraging the scikit-learn library. The goal is to predict credit defaults from a dataset of 50,000 loans with features such as loan amount, interest rate, borrower's income, employment history, and credit score.
+Using the 'Loan_Data' folder containing csv files for each loan (e.g., 'loan_001.csv', 'loan_002.csv'), extract rules that can be used to predict whether a loan will default. The extracted rules should be in the form of IF-THEN statements and saved as 'default_rules.txt'. Ensure that the generated rules are concise, accurate, and explainable.
+Assume that you have access to a high-performance computing environment with sufficient memory and processing power. Implement your solution using Python 3.x and leverage scikit-learn's decision tree classifier for rule extraction.
+**Dataset Information**
+* Each csv file contains features:
+	+ Loan amount
+	+ Interest rate
+	+ Borrower's income
+	+ Employment history (0/1)
+	+ Credit score
+* Target variable: Default status (0/1)
+**Evaluation Criteria**
+1. Accuracy of the rule extraction framework on unseen data.
+2. Complexity and interpretability of extracted rules.
+3. Runtime performance and scalability of the solution.
+**Required Deliverables**
+1. A Python script (`rule_extraction.py`) that"
+12,medical,normal regularly encountered,"**Problem: Predicting Patient Outcomes Using Electronic Health Records**
+A hospital's electronic health records (EHRs) contain a vast amount of data on patient demographics, medical history, treatments, and outcomes. The goal is to develop a predictive model that can forecast patient outcomes based on these EHRs.
+Given the folder containing EHR files named after patient IDs in the format {patientID}.csv with the following columns:
+- Patient ID (unique identifier)
+- Gender
+- Age
+- Medical History (a binary variable indicating presence/absence of specific conditions)
+- Medications (a list of medications prescribed to the patient)
+- Lab Results (numerical values for various lab tests)
+- Treatment Outcomes (categorical outcome - e.g., recovery, relapse, etc.)
+Can you use a combination of machine learning algorithms and data preprocessing techniques in Python with libraries such as pandas, NumPy, scikit-learn, and Matplotlib to:
+1. Clean and preprocess the EHR data.
+2. Perform feature engineering by extracting relevant features from the Lab Results column (e.g., mean, standard deviation, etc.).
+3. Split the dataset into training and testing sets.
+4. Train a predictive model using a suitable algorithm (e.g., logistic regression, decision trees, random forests, or neural networks) to predict patient outcomes based on their EHR data.
+5. Evaluate the performance of the model using appropriate metrics (e.g., accuracy, precision, recall)."
+13,science,very hard and challenging for anyone but the best to solve,"Develop an AI model that can predict the formation time of exoplanets based on various celestial data including stellar mass, radius, age, and metallicity from the NASA Exoplanet Archive. Using Python with libraries such as Pandas, NumPy, Scikit-learn, and Matplotlib, write a script that:
+1. Extracts relevant data from the NASA Exoplanet Archive into a Pandas DataFrame.
+2. Cleans and preprocesses the data by handling missing values, outliers, and encoding categorical variables.
+3. Implements a deep learning model using Keras (with TensorFlow backend) to predict exoplanet formation times based on the preprocessed data.
+4. Uses cross-validation techniques to evaluate the performance of the model on unseen data.
+5. Visualizes the predicted results using Matplotlib to understand the relationships between predictor variables and exoplanet formation times.
+The script should be able to read from a CSV file 'exoplanet_data.csv' located in the '/home/user/Documents/Exoplanet_Database/' directory, which contains columns for stellar mass (Ms), radius (R), age (A), metallicity ([Fe/H]), and formation time (TF). The model should output a new CSV file called 'predicted_formation_times.csv' with the predicted exoplanet formation times.
+**Assumptions:**
+- The data is stored in a CSV file named 'exoplanet_data.csv' located in '/home/user/Documents/Exoplanet_Database/'.
+-"
+14,math,nearly impossible,"Develop an algorithm that uses a combination of numerical methods and linear algebra to solve a 3D surface reconstruction from incomplete and noisy point cloud data. 
+Given a folder named 'PointCloud_Data' containing files with names in the format {sceneID}_points.csv where each csv file contains columns of X, Y, Z coordinates representing points on a 3D surface. The sceneIDs are integers ranging from 1 to 10.
+Some points are missing or have noise and you need to write a Python script that uses libraries like NumPy, SciPy, and Matplotlib to:
+- Read the CSV files in the 'PointCloud_Data' folder
+- Filter out noisy points using a statistical method (e.g., IQR or Z-score) and remove points with missing values
+- Apply a surface reconstruction algorithm such as Poisson Surface Reconstruction or Delaunay Triangulation to reconstruct the 3D surface from the filtered point cloud data
+- Visualize the reconstructed surface using Matplotlib's 3D plotting capabilities and save the plots in a new folder named 'Reconstructed_Surfaces'
+- Output the reconstructed surface as a set of vertices and triangles in a new CSV file called 'reconstructed_surface.csv'
+Use the following Python libraries: NumPy, SciPy, Pandas, and Matplotlib. Ensure your solution handles edge cases such as empty or malformed input files.
+File paths:
+- Input data folder: '/Users/username/Documents/PointCloud_Data'
+- Output plots folder:"
+15,coding,extremely challenging but theoretically possible,"Here's a complex, open-ended problem in the coding sector:
+Generate a Python program utilizing scikit-learn and pandas that can identify anomalies in the usage patterns of users on an e-commerce platform. Given a CSV file named 'user_activity.csv' located at '/data/ecommerce/user_activity/' folder, with columns for User ID, Date, Time, Product Purchased, Quantity, Total Spend, and Category, write a program to:
+- Apply Principal Component Analysis (PCA) to reduce the dimensionality of the data from 7 features down to 3.
+- Use Isolation Forest algorithm from scikit-learn to identify anomalies in the usage patterns of users based on their purchases.
+- Create a new dataframe that includes only the identified anomalous transactions and save it as 'anomalous_transactions.csv' in the '/data/ecommerce/anomalies/' folder.
+- Visualize the top 10 most anomalous products using Seaborn's bar chart, with product names on the x-axis and anomaly scores on the y-axis, saving the plot as 'top_anomalous_products.png'.
+The program should handle missing values by imputing them using KNNImputer from scikit-learn. The Isolation Forest algorithm should be tuned to achieve an optimal number of clusters that capture anomalies effectively.
+Assume that there are around 1000 unique users, and each user has made at least one purchase. The 'user_activity.csv' file contains approximately 50000 rows"
+16,factual,normal regularly encountered,"A company that specializes in analyzing consumer behavior wants you to develop a predictive model that can forecast sales of different products across various channels (online, offline, and mobile) based on historical data. The goal is to identify the most influential factors driving sales and make informed decisions about resource allocation.
+Given a folder named 'Sales_Data' containing files with the names of {product}.csv with the csv containing the columns of Date, Channel (Online, Offline, Mobile), Sales_Amount, Marketing_Costs, Store_Location, Seasonality (1 = Winter, 2 = Spring, etc.), and Product_Category. The company is interested in replicating a regression model that can predict sales across different channels using the provided data.
+Can you develop a predictive model to forecast sales of various products based on historical data? Ideally, you should:
+- Identify the most influential factors driving sales
+- Develop a regression model that can accurately predict sales across different channels
+- Create a new csv called 'forecasted_sales.csv' with the predicted sales amount for each product and channel
+Assume you will be using Python as the primary language and pandas, numpy, scikit-learn libraries. You should also include any relevant code or formulas used in your solution.
+### Solution:
+**Problem Statement:**
+A company that specializes in analyzing consumer behavior wants you to develop a predictive model that can forecast sales of different products across various channels (online, offline, and mobile) based on historical data.
+Given a folder named '"
+17,heuristics,very hard and challenging for anyone but the best to solve,"Develop an optimization model in Python using PuLP library that minimizes the total cost of a logistics network with multiple warehouses, distribution centers, and customer locations. The model should include:
+1.  **Warehouse Location Problem:** Determine the optimal location of warehouses to minimize transportation costs between warehouses and distribution centers.
+2.  **Distribution Center Location Problem:** Choose the distribution centers among potential sites considering their proximity to customers, warehouse locations, and capacity constraints.
+3.  **Route Optimization:** For each customer, find the most cost-effective route from one or more distribution centers that can serve them.
+4.  **Inventory Management:** Balance inventory levels across warehouses and distribution centers to minimize stockouts and overstocking costs while considering lead times and demand fluctuations.
+5.  **Scenario Analysis:** Implement a scenario analysis module to evaluate how changes in key parameters (e.g., fuel prices, demand growth) affect the logistics network's efficiency and identify potential cost savings opportunities.
+Use the following data:
+-   Warehouse locations: `warehouses.csv` with columns for warehouse ID, location coordinates (latitude and longitude), capacity, and fixed costs.
+-   Potential distribution center sites: `potential_dcs.csv` with columns for site ID, location coordinates, capacity, and fixed costs.
+-   Customer locations and demand: `customers.csv` with columns for customer ID, location coordinates, annual demand, and service level requirements.
+-   Transportation costs (distance-based): `transportation_costs.csv` with columns for origin"
+18,medical,nearly impossible,"Design an AI system capable of predicting patient outcomes in a clinical trial by leveraging machine learning and natural language processing techniques.
+**Given:**
+- A folder named `Clinical_Trials_Data` containing text files (`patient_notes.txt`, `lab_results.txt`) with patient data, including notes from doctors and lab results.
+- A CSV file named `demographics.csv` with basic information about patients (age, gender, medical history).
+- Another CSV file named `outcome_data.csv` containing the actual outcomes of the clinical trial (disease progression, survival rates).
+**Objective:**
+Implement a machine learning pipeline in Python using libraries such as scikit-learn and NLTK to predict patient outcomes based on their notes, lab results, demographics, and historical data.
+**Requirements:**
+1. **Text Preprocessing:** Use techniques like tokenization, stemming, lemmatization, and named entity recognition to clean the text data from `patient_notes.txt` and extract relevant information.
+2. **Feature Engineering:** Extract relevant features from the preprocessed text data using techniques such as TF-IDF, word embeddings (e.g., Word2Vec), and topic modeling.
+3. **Data Integration:** Integrate the extracted features with the numerical data from `lab_results.txt`, `demographics.csv`, and `outcome_data.csv`.
+4. **Model Selection:** Train a machine learning model using the integrated dataset to predict patient outcomes (disease progression, survival rates).
+5. **Hyperparameter Tuning"
+19,science,extremely challenging but theoretically possible,"## Problem: Predicting Tumor Growth Using Machine Learning on PET Scan Data
+You are a medical researcher tasked with developing an early warning system for detecting tumor growth in patients using positron emission tomography (PET) scan data. You have been provided with a dataset containing the images and corresponding information about the tumors.
+### Task:
+1. **Preprocess the Images**: Load the PET scan images from the folder `/data/PET_Scans` into your Python script, then apply the following transformations:
+   - Resize all images to 256x256 pixels.
+   - Normalize pixel values between 0 and 1.
+   - Convert images to grayscale.
+2. **Extract Features**: Implement a Convolutional Neural Network (CNN) using Keras with TensorFlow backend to extract features from the preprocessed images. The CNN architecture should include:
+   - Two convolutional layers with ReLU activation and max pooling.
+   - One fully connected layer with dropout regularization.
+   
+3. **Train the Model**: Train the model on a subset of the dataset (`/data/PET_Scans/training`) to predict tumor growth. Use mean squared error as your loss function.
+4. **Evaluate the Model**: Evaluate the performance of your model on a separate validation set (`/data/PET_Scans/validation`).
+5. **Predict Tumor Growth**: Use your trained model to make predictions on a new, unseen PET scan image stored in `/data/PET_Scans/new_scan`."
+20,math,normal regularly encountered,"Here's a complex open-ended math problem in the sector of Signal Processing:
+**Problem Statement:**
+In the field of signal processing, a team at a leading audio engineering firm is tasked with designing an algorithm to detect and classify different types of musical genres based on spectrogram features. They have collected a dataset of 1000 songs from various genres (pop, rock, jazz, etc.) each represented by a spectrogram image.
+**Task:**
+Given a folder `Music_Genres` containing the spectrogram images in `.jpg` format with the file names following this convention `{song_title}_{genre}.jpg`, develop a Python script that uses Convolutional Neural Networks (CNNs) to classify these songs into their respective genres. The CNN should be trained on a subset of 800 songs and tested on the remaining 200 songs.
+**Requirements:**
+- Use TensorFlow or Keras as your deep learning library.
+- Utilize pre-processing techniques such as data augmentation, normalization, and resizing to enhance model performance.
+- Implement transfer learning by initializing your CNN with a pre-trained model (e.g., VGG16 or ResNet50).
+- Train the model using Adam optimizer with a learning rate of 0.001 and binary cross-entropy loss function.
+- Evaluate the model's accuracy on the test set and provide insights into its performance, including confusion matrix, precision, recall, and F1 score.
+- Finally, use the trained model to predict the genres for a new dataset"
+21,coding,very hard and challenging for anyone but the best to solve,"Develop an AI system that can predict stock prices based on a combination of traditional technical indicators (Moving Averages, Bollinger Bands, Relative Strength Index) and machine learning algorithms. The system should incorporate a novel approach to handling high-frequency data from multiple financial exchanges using a hierarchical temporal memory network.
+Given a folder containing daily OHLC price data for major stock indices (e.g., S&P 500, Dow Jones Industrial Average, NASDAQ Composite) in CSV format, as well as pre-computed technical indicators (MA50, MA200, BBANDS, RSI) from the 'Technical_Indicators' folder, and real-time high-frequency trade data from the 'Trade_Data' folder, implement a Python solution using libraries such as Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow, and Keras.
+The system should be able to:
+1. Clean and preprocess the data by handling missing values, outliers, and data normalization.
+2. Implement a hierarchical temporal memory network (HTM) to learn patterns in high-frequency trade data from multiple exchanges.
+3. Combine traditional technical indicators with machine learning algorithms (e.g., LSTM, GRU, Random Forest) to predict stock prices.
+4. Evaluate the performance of the system using metrics such as mean absolute error (MAE), mean squared error (MSE), and R-squared value.
+Output a CSV file 'Predictions.csv' containing the predicted stock prices for each index, along with their corresponding"
+22,factual,nearly impossible,"Develop an AI model that can accurately predict the likelihood of a new product launch by analyzing various social media platforms and incorporating natural language processing (NLP) techniques. Given a dataset containing tweets, Facebook posts, Instagram captions, and YouTube comments related to a company's brand, develop a deep learning model using Python with libraries such as TensorFlow or PyTorch that can:
+1.  Extract relevant features from the text data using word embeddings like Word2Vec or GloVe.
+2.  Incorporate sentiment analysis to gauge the emotional tone of the posts and comments.
+3.  Utilize time-series analysis to capture seasonal patterns in the engagement metrics.
+4.  Integrate external factors such as economic indicators, competitor activity, and industry trends.
+The model should be able to classify new, unseen data into one of three categories: 'Likely Launch,' 'Unlikely Launch,' or 'Neutral' based on a threshold value calculated from the training dataset.
+Assume that you have access to the following datasets:
+-   **social_media_data.csv**: A CSV file containing the social media posts and comments with columns for platform, timestamp, text, sentiment score, and engagement metrics (likes, shares, comments).
+-   **economic_indicators.csv**: A CSV file with historical economic indicators such as GDP growth rate, inflation rate, and unemployment rate.
+-   **competitor_activity.csv**: A CSV file containing information about competitors' product launches and marketing campaigns.
+-   **industry_trends.csv**:"
+23,heuristics,extremely challenging but theoretically possible,"Problem Statement:
+Create a heuristic search algorithm using A* (A-star) with a custom heuristic function based on Manhattan distance in 3D space. Given a large dataset of 3D points stored in the '3D_Points.csv' file, design an efficient data structure to store and query these points efficiently.
+The points are described by their x, y, and z coordinates in the csv file.
+Implement the A* search algorithm using Python with the NetworkX library for graph creation and manipulation. The goal is to find the shortest path between two randomly selected points from the dataset, A and B, represented as (x1,y1,z1) and (x2,y2,z2).
+Create a new csv file 'shortest_path.csv' that contains the coordinates of all points on the shortest path from point A to point B.
+The heuristic function should be based on the Manhattan distance formula: d = |x2 - x1| + |y2 - y1| + |z2 - z1|. However, you need to incorporate a 'cost' factor into this formula that represents the difficulty of traversing each dimension in 3D space. This cost factor should be learned from the dataset and incorporated into the heuristic function.
+To make it more challenging:
+- The points in the '3D_Points.csv' file are not necessarily connected by edges, you need to create an undirected graph with points as nodes and edges connecting nearest neighbors.
+-"
+24,medical,normal regularly encountered,"""Develop a predictive model to forecast 30-day hospital readmission rates for patients with heart failure using the MIMIC III dataset stored in the `/data/MIMIC III` directory. The model should account for demographic factors, comorbidities, and treatment variables.
+The dataset contains the following files: `admissions.csv`, `diagnoses.csv`, `medications.csv`, and `patients.csv`. Your task is to:
+1. Clean and preprocess the data by handling missing values, encoding categorical variables, and scaling numeric features using scikit-learn.
+2. Split the data into training and testing sets (80% for training and 20% for testing).
+3. Train a logistic regression model using the preprocessed data and evaluate its performance on the test set using metrics such as accuracy, precision, recall, and F1 score.
+4. Compare the results with those obtained from a random forest classifier and a support vector machine (SVM) using the same preprocessed data.
+5. Provide a detailed explanation of your approach, including any assumptions made and potential limitations.
+Assume you have basic knowledge of Python and its relevant libraries (e.g., pandas, NumPy, scikit-learn). Use the following file paths:
+* `/data/MIMIC III/admissions.csv`
+* `/data/MIMIC III/diagnoses.csv`
+* `/data/MIMIC III/medications.csv`
+* `/data/MIMIC III/patients.csv`
+Your"
+25,science,very hard and challenging for anyone but the best to solve,"In ""Theoretical Foundations of Quantum Mechanics"" by John von Neumann, there is a section on applying quantum entanglement principles to predict complex material properties. Given a dataset of crystal structures stored in the 'Crystal_Database.csv' file and the 'Materials_Science_Library' folder containing relevant physical constants for various materials.
+Can you develop an open-source Python package (using libraries such as pandas, numpy, scikit-learn, and matplotlib) to predict the thermal conductivity of a material based on its crystal structure using machine learning algorithms? 
+The package should include:
+1.  Data Preprocessing:
+    *   Load 'Crystal_Database.csv' into a pandas DataFrame.
+    *   Filter out rows with missing values in the columns for lattice parameters, atomic mass, and number of atoms per unit cell.
+2.  Feature Engineering:
+    *   Calculate relevant physical constants (e.g., density, Debye temperature) from the filtered data using functions within the 'Materials_Science_Library' folder.
+    *   Create new features by applying dimensionality reduction techniques (e.g., PCA or t-SNE) to the calculated constants.
+3.  Model Training:
+    *   Split the preprocessed and feature-engineered dataset into training and testing sets.
+    *   Train a machine learning model (e.g., random forest, gradient boosting, or neural network) using the training set to predict thermal conductivity.
+4.  Model Evaluation:
+    *   Evaluate the"
+26,math,nearly impossible,"Develop an algorithm that utilizes deep learning techniques to identify patterns in the topology of protein structures. Utilize a dataset provided by the Protein Data Bank (PDB) stored locally at `C:UsersUsernamePDB_Data` and train a model capable of predicting the function of newly discovered proteins based on their 3D structure.
+Assuming you have access to a high-performance computing cluster, implement your solution using Python with the TensorFlow library. Incorporate tools such as NumPy for numerical computations, SciPy for scientific functions, and Matplotlib for data visualization.
+Upon training your model, generate a report detailing:
+1. The architecture of the neural network used.
+2. The performance metrics achieved on the validation set (accuracy, precision, recall, F1-score).
+3. A 2D representation of the protein structure using dimensionality reduction techniques such as PCA or t-SNE.
+Store the results in a new folder `PDB_Analysis` located at the root directory and save any necessary files for future analysis.
+Note: This problem is highly complex due to the vastness of proteins, their diverse functions, and the difficulty of modeling 3D structures. A realistic solution would involve an enormous amount of computational resources, extensive data preprocessing, and a well-designed deep learning architecture. The complexity of this task makes it nearly impossible without significant advances in computing power or novel methodological breakthroughs. 
+### File Structure
+- `PDB_Data`: folder containing the PDB dataset.
+  -"
+27,coding,extremely challenging but theoretically possible,"**Problem Statement:**
+Develop a system using Python and its associated libraries (pandas, numpy, matplotlib, scikit-learn) that can analyze the sentiment of stock tweets using NLP techniques.
+Given a folder named 'Twitter_Stock_Data' containing CSV files where each file represents the tweets for a specific stock ticker symbol, with columns for Date, Tweet_Text, Sentiment_Label, and Ticker:
+1. Use Natural Language Processing to classify the sentiment of the tweet as Positive, Negative, or Neutral.
+2. Apply Text Preprocessing techniques such as Tokenization, Stopword removal, Lemmatization, and Stemming to improve the accuracy of the sentiment analysis.
+3. Utilize a supervised machine learning model (e.g., Naive Bayes, Logistic Regression, Random Forest) trained on a labeled dataset to classify the sentiment of new tweets.
+4. Create a feature set that includes metrics such as Tweet Length, Word Count, and Frequency of Sentiment-Indicative Words.
+5. Implement a data visualization module using matplotlib to display a bar chart showing the top 10 most active stocks based on the number of positive, negative, or neutral tweets.
+6. Develop an interactive dashboard that allows users to select a stock ticker symbol and view a scatter plot displaying the sentiment scores over time for that specific stock.
+**Requirements:**
+* The system should be able to analyze the sentiment of at least 1000 unique stocks within the 'Twitter_Stock_Data' folder.
+*"
+28,factual,normal regularly encountered,"Generate a complex, open-ended problem in the factual sector, similar in structure and conciseness to this example:
+""Develop an algorithm using Python and its relevant libraries (e.g., scikit-learn, pandas) to classify historical stock prices into different market regimes based on their Bollinger Bands. Given a folder named 'Market_Data' containing CSV files with the names of {company}.csv where each csv contains Date, Open, High, Low, Close, and Volume columns, create an executable script that outputs a new CSV file named 'regime_classification.csv' where each row represents a company-stock combination and its corresponding market regime classification. The algorithm should consider both short-term and long-term moving averages for Bollinger Bands calculations and utilize a decision tree classifier to predict the market regimes (e.g., uptrend, downtrend, consolidation). Ensure that the script can handle missing values, outliers, and different stock price scales.""  ### Solution: 
+Here is a possible solution in Python:
+```python
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+# Load data from CSV files into a DataFrame
+def load_data(file_path):
+    df = pd.read_csv(file_path)
+    return df
+# Calculate Bollinger Bands
+def calculate_bollinger_bands(df, window_short, window_long):
+    df['MA_Short'] = df['Close'].rolling(window="
+29,heuristics,very hard and challenging for anyone but the best to solve,"Develop an AI-driven system that utilizes reinforcement learning (RL) to optimize the allocation of resources in a complex network of renewable energy sources. The goal is to maximize the overall energy output while minimizing costs and environmental impact.
+**Problem Statement**
+You are given a folder `Renewable_Energy_Network` containing files with the names of `{region}.csv`, where each file represents a geographical region and contains data on:
+- `Date`
+- `Solar_Panel_Count`
+- `Wind_Turbine_Count`
+- `Hydro_Power_Plant_Count`
+- `Battery_Size`
+- `Energy_Demand`
+Additionally, you have access to a database `Energy_Source_Characteristics` containing information on the efficiency and environmental impact of each energy source.
+**Objective**
+Using reinforcement learning, design an AI system that optimizes the allocation of resources across different regions and energy sources to maximize overall energy output while minimizing costs and environmental impact. The system should:
+1.  Initialize a population of candidate solutions (energy allocations) for each region.
+2.  Evaluate the fitness of each solution using a combination of metrics, including:
+    *   Energy output
+    *   Cost
+    *   Environmental impact
+3.  Apply reinforcement learning algorithms to select and modify the best-performing solutions in each iteration.
+4.  Update the population with new candidate solutions based on the RL-driven selection process.
+5.  Repeat steps 2-4 for a specified number of iterations or until convergence is reached"
+30,medical,nearly impossible,"Develop an AI system that can predict patient readmission risk within 30 days of hospital discharge based on electronic health records (EHRs) and other external factors. The system should integrate with the existing healthcare information system, extract relevant data from various sources, and apply machine learning models to identify high-risk patients.
+**Data Sources:**
+* EHRs stored in a relational database management system accessible via ODBC connection
+* External health-related datasets (e.g., Medicare claims, social determinants of health)
+* Demographic data from the patient's primary care physician
+**System Requirements:**
+1. **Data Preprocessing:** Develop a Python script that extracts relevant EHR data from the database using SQL queries and external dataset APIs.
+2. **Feature Engineering:** Implement techniques to transform raw data into meaningful features, such as:
+	* Extracting medical concepts (e.g., diagnoses, procedures) using natural language processing
+	* Normalizing numerical values for consistency across datasets
+3. **Model Selection and Training:**
+	* Compare the performance of various machine learning algorithms (e.g., logistic regression, decision trees, random forests, neural networks)
+	* Train models on a subset of the data to evaluate their accuracy and robustness
+4. **Integration with Healthcare Information System:** Design an API to interact with the EHR system, allowing for real-time updates and notifications when a patient is identified as high-risk.
+5. **Visualization and Reporting:** Develop interactive dashboards to display key"
+31,science,extremely challenging but theoretically possible,"Create a complex, open-ended problem in the science sector:
+""Develop a computational model using Python with the NumPy and SciPy libraries to simulate the behavior of a complex biological system - the circadian rhythm of a specific species of plant. Given a dataset of photoperiod (light-dark cycle) and temperature data for the past year stored in the 'Photoperiod_Data.csv' file located in the '/data/plant_circadian_rhythm/' directory, predict the timing of the plant's flowering event based on the simulated circadian rhythm.
+Implement a non-linear regression model using Gaussian processes to forecast the plant's growth stages (seedling, vegetative, reproductive) over a 6-month period with hourly resolution. Use the 'GPRegression' module from the SciPy library and assume an underlying probabilistic structure for the data.
+Your solution should include:
+- A Python script that loads the dataset and preprocesses it for analysis
+- Implementation of the Gaussian process regression model to predict the plant's growth stages
+- Visualization of the predicted growth stages using Matplotlib and/or Seaborn libraries
+- Creation of a new CSV file called 'predicted_growth_stages.csv' containing the predicted timing of the flowering event and hourly predictions of the growth stages
+The dataset is stored in the '/data/plant_circadian_rhythm/' directory and includes the following columns: Date, Photoperiod (light-dark cycle), Temperature, Growth Stage. The data is assumed to be collected at"
+32,math,normal regularly encountered,"**Problem: ""Optimizing Traffic Signal Control in a Smart City""**
+In the book 'Urban Traffic Management and Road Safety' there is a section on optimizing traffic signal control using machine learning. Given a dataset of {traffic_signals}.csv with columns of IntersectionID, TimeStamp, FlowRate, Density, Speed, and TravelTime from the folder '/TrafficData/', can you develop an algorithm in Python to predict traffic congestion at each intersection and optimize traffic signal timing using reinforcement learning? Ideally, you should use Q-learning to update signal timings based on real-time data and achieve a 20% reduction in average travel time. Create a new csv called 'optimized_signals.csv' with the updated signal timings for each intersection.
+**Dataset:**
+- The dataset contains historical data from {traffic_signals}.csv
+- Each row represents an observation of traffic conditions at a particular intersection
+- Columns:
+  - IntersectionID (string)
+  - TimeStamp (datetime)
+  - FlowRate (float, units: vehicles per hour)
+  - Density (float, units: vehicles per kilometer squared)
+  - Speed (float, units: kilometers per hour)
+  - TravelTime (float, units: minutes)
+**Requirements:**
+- Use Python with the following libraries:
+  - pandas for data manipulation
+  - numpy for numerical computations
+  - tensorflow for reinforcement learning
+  - matplotlib and/or seaborn for visualization
+- Implement Q-learning to update signal timings based on real-time data"
+33,coding,very hard and challenging for anyone but the best to solve,"**Problem: ""Predictive Modeling of Customer Churn in a Telecommunications Firm""**
+Given a dataset containing information about customers of a telecommunications firm, including demographic details (age, income), usage patterns (minutes used, data consumed), and service characteristics (plan type, contract duration), develop a predictive model to forecast the likelihood of customer churn within the next 12 months.
+**Dataset:**
+The dataset is stored in a CSV file named `customer_data.csv` located at `/path/to/dataset/customer_data.csv`. The file contains the following columns:
+- `id`: Unique customer identifier
+- `age`: Customer age in years
+- `income`: Annual income of the customer
+- `minutes_used`: Total minutes used by the customer per month
+- `data_consumed`: Total data consumed by the customer per month (in GB)
+- `plan_type`: Type of service plan (e.g., basic, premium, family)
+- `contract_duration`: Length of the contract in months
+- `churn_status`: Indicator of whether the customer has churned (1) or not (0)
+**Model Requirements:**
+1. Develop a machine learning model that can accurately predict customer churn using the provided dataset.
+2. Evaluate the performance of your model using metrics such as accuracy, precision, recall, F1 score, and area under the ROC curve (AUC-ROC).
+3. Implement feature engineering techniques to extract relevant information from the dataset, including:
+    a."
+34,factual,nearly impossible,"Develop a model that can forecast the daily trading volume of stocks based on historical data using an LSTM network. The model should take into account the seasonality of the stock's trading volume and handle missing values in the dataset.
+Given a folder named 'stock_data' containing CSV files with names corresponding to their respective ticker symbols (e.g., AAPL.csv, GOOG.csv), create a Python script that loads the data from each file, preprocesses it by handling missing values and removing outliers, applies the LSTM model to forecast daily trading volume for each stock over the next 30 days, and saves the predicted volumes in a new CSV file named 'forecasted_volumes.csv' within the same folder.
+Assume that the historical data spans at least 2 years (approximately 250 trading days) and is stored in columns labeled 'Date', 'Open', 'High', 'Low', 'Close', and 'Volume'. The LSTM model should be implemented using the Keras library, and the data preprocessing steps should utilize the Pandas library. Ensure that your solution includes comments to explain the reasoning behind each step of the process.
+### Bonus:
+Implement a feature to visualize the historical trading volume of each stock alongside its forecasted volume over the next 30 days. Utilize the Matplotlib library for this purpose and save the visualizations as separate images named 'stock_{ticker}_volume_forecast.png' in the same folder.
+### Important:
+The model should be able to handle stocks with varying frequencies"
+35,heuristics,extremely challenging but theoretically possible,"#### Problem: Heuristics-based Portfolio Optimization using Monte Carlo Simulations
+In the context of investment portfolios, heuristics can play a crucial role in decision-making under uncertainty. Consider a portfolio manager tasked with optimizing a mix of stocks and bonds to achieve maximum returns while minimizing risk.
+Given a folder named ""Portfolio_Data"" containing subfolders for Stocks (e.g., ""AAPL"", ""GOOG"", etc.) and Bonds (e.g., ""US10Y"", ""GER30"", etc.), each subfolder holding csv files with daily price data (Open, High, Low, Close) for the respective asset.
+Your task is to develop a Python script using the Pandas library to:
+1. **Import Data**: Load the stock and bond price data from csv files within their respective folders.
+2. **Calculate Returns**: Compute the log returns of each asset over various time frames (e.g., daily, weekly, monthly) and store them in separate data structures (pandas.DataFrame or pandas.Series).
+3. **Heuristics Application**: Implement a heuristic to select the top-performing assets in each category (stocks and bonds) based on their average returns over the selected time frames.
+4. **Monte Carlo Simulations**: Perform Monte Carlo simulations (10,000 iterations) to estimate the expected returns and volatility of portfolios composed of different combinations of these heuristically selected stocks and bonds.
+5. **Optimization**: Use a heuristic optimization algorithm (such as Genetic Algorithm or"
+36,medical,normal regularly encountered,"Develop an AI model that can predict the likelihood of a patient developing sepsis from Electronic Health Records (EHRs) based on clinical variables and lab results. The EHR data is stored in a MySQL database with tables named 'patient demographics', 'medical history', 'medications', 'lab_results', and 'vital_signs'. Assume that you have already set up the necessary connections to the database.
+Given that sepsis can be caused by various factors including but not limited to infections, surgeries, and trauma, write a Python script using the scikit-learn library to train a machine learning model on the EHR data. The model should predict the likelihood of developing sepsis within 24 hours based on clinical variables and lab results.
+The script should perform the following tasks:
+1. Connect to the MySQL database
+2. Extract relevant features from the EHR data (e.g., age, gender, medical history, recent surgeries, infections, lab results)
+3. Split the dataset into training and testing sets (70% for training and 30% for testing)
+4. Train a logistic regression model using the extracted features to predict sepsis
+5. Evaluate the performance of the model on the test set using metrics such as accuracy, precision, recall, F1-score, and area under the ROC curve
+6. Save the trained model in a file named 'sepsis_predictor.pkl'
+7. Create a new table in the MySQL database to store"
+37,science,very hard and challenging for anyone but the best to solve,"**Problem:**
+Develop a predictive model for sea level rise in coastal areas using machine learning techniques. The goal is to forecast future sea levels with high accuracy, taking into account various environmental and climate factors.
+**Dataset:**
+*   Obtain the historical sea level data from the National Oceanic and Atmospheric Administration (NOAA) dataset stored in the `/data/sea_level_rise` folder.
+*   The dataset consists of daily records of sea level heights for various coastal stations across the globe, including tidal ranges, atmospheric pressure, wind speed, ocean currents, and other environmental factors.
+**Task:**
+1.  **Data Preprocessing:**
+    *   Load the NOAA dataset from `/data/sea_level_rise` using Python's Pandas library.
+    *   Clean and preprocess the data by handling missing values, removing outliers, and transforming variables as necessary (e.g., log scaling for tidal ranges).
+    *   Split the preprocessed data into training (~70%) and testing sets (~30%).
+2.  **Feature Engineering:**
+    *   Extract relevant features from the dataset that might affect sea level rise, such as:
+        +   Seasonal and monthly patterns in tidal ranges
+        +   Correlations between atmospheric pressure, wind speed, and ocean currents
+        +   Trends in sea level heights over time
+    *   Use techniques like Fourier transform, wavelet analysis, or statistical modeling to extract these features.
+3.  **Model Development:**"
+38,math,nearly impossible,"Develop an algorithm that predicts stock prices using a combination of Long Short-Term Memory (LSTM) networks and Stochastic Gradient Descent (SGD). The model should account for the effects of both historical price data and news sentiment on future stock performance. Utilize the 'yfinance' library to download daily stock price data from Yahoo Finance, extract relevant features using 'pandas' and 'numpy', and train an LSTM network with SGD optimization using 'keras'.
+Given a folder containing CSV files named after various stocks (e.g., 'AAPL.csv', 'GOOG.csv'), write a Python script that:
+1. Downloads the historical price data for all stocks in the specified time frame.
+2. Extracts relevant features from the price data, such as moving averages and RSI.
+3. Retrieves news sentiment data for each stock using an API (e.g., NewsAPI) or scraping techniques.
+4. Concatenates the feature matrices for all stocks into a single array.
+5. Splits the dataset into training and testing sets.
+6. Trains an LSTM network with SGD optimization on the training set.
+7. Evaluates the model's performance on the test set using metrics such as mean absolute error (MAE) and root mean squared percentage error (RMSPE).
+8. Saves the trained model to a file called 'stock_price_predictor.h5'.
+Assume that the folder containing the CSV files is located at '/Users/username/Documents/data/', and the API"
+39,coding,extremely challenging but theoretically possible,"Develop an AI system that can generate realistic virtual humans using a combination of Generative Adversarial Networks (GANs) and Physically Based Rendering (PBR). The system should be able to create detailed 3D models of human faces, bodies, and accessories, and then animate them in real-time using keyframe animation or physics-based simulations.
+Given a folder that contains a set of reference images of humans with different skin tones, hair textures, and body types, as well as a library of clothes and accessories, can you train the AI system to generate realistic virtual humans that match the diversity of the reference images?
+The system should be able to:
+1. Extract features from the reference images using techniques such as deep learning-based feature extraction or SIFT.
+2. Use these features to create 3D models of human faces and bodies, including skin texture, hair texture, and body shape.
+3. Generate detailed accessories such as clothing, jewelry, and hats that match the style and era of the reference images.
+4. Animate the virtual humans using keyframe animation or physics-based simulations, such as cloth simulation or rigid body dynamics.
+The AI system should be able to generate at least 10 different virtual humans per hour, each with their own unique appearance and accessories. The system should also be able to adapt to new reference images and styles without requiring extensive retraining.
+Please use Python as the primary programming language, along with libraries such as TensorFlow or PyTorch for deep learning,"
+40,factual,normal regularly encountered,"Here is a complex open-ended problem in the factual sector:
+**Problem:** Analyze Customer Churn Prediction using Historical Data
+In the context of telecommunications, customer churn prediction is crucial for companies to retain valuable customers. Given a dataset containing historical customer information and their behavior, develop a predictive model to identify potential churners.
+**Dataset:**
+- `customer_data.csv` in the `/data/incoming/` directory contains columns: Customer ID (unique identifier), Plan Type (e.g., Basic, Premium), Monthly Charges, Total Churned (1 for yes, 0 for no).
+- `usage_data.csv` in the same directory contains columns: Customer ID (matching with customer_data.csv), Usage Hours, Data MB Used.
+**Task:**
+Using Python and scikit-learn library, perform the following tasks:
+1. Preprocess both datasets by handling missing values and encoding categorical variables.
+2. Merge the two datasets based on the `Customer ID`.
+3. Extract relevant features from the merged dataset that can predict churn (e.g., usage patterns, plan type).
+4. Split the dataset into training and testing sets (80% for training and 20% for testing).
+5. Train a machine learning model to predict customer churn using a suitable algorithm (e.g., logistic regression, decision tree, random forest).
+6. Evaluate the performance of your model using metrics such as accuracy, precision, recall, F1 score.
+7. Provide insights into which features are most relevant"
+41,heuristics,very hard and challenging for anyone but the best to solve,"Develop a machine learning model that can predict stock prices using historical data in the 'Stock_History' folder. The folder contains csv files for each stock with columns for Date, Open, High, Low, Close, Volume, and AdjClose.
+The goal is to create a model that can accurately forecast closing prices 30 days into the future for each stock. Use the ARIMA library in Python to develop the model. Your solution should include:
+- A description of your methodology
+- The code required to load the data from 'Stock_History' and preprocess it
+- The development and implementation of the ARIMA model
+- An evaluation of the performance of the model using metrics such as Mean Absolute Error (MAE) and Mean Squared Error (MSE)
+- A demonstration of how to use the developed model to make predictions for a given stock
+- Your solution should also include any relevant visualizations and plots to help understand the results
+Assume that you have access to historical data from 2015 to the present day. You can use any other libraries or frameworks as necessary.
+Create a new csv file called 'predicted_prices.csv' in the same directory, which includes the predicted closing prices for each stock over the next 30 days.
+You should also write an accompanying report that explains your methodology and results in detail. The report should be at least 5 pages long (excluding any references or appendices) and include any relevant figures and tables. Use proper formatting and include"
+42,medical,nearly impossible,"Develop an AI system that integrates data from electronic health records (EHRs), clinical trials, and genomic data to predict patient outcomes in breast cancer patients. The system should identify high-risk patients who may benefit from targeted therapies.
+Given a dataset of 10,000 EHRs stored in the 'patient_data.csv' file located at '/data/patient_data/', and a separate CSV file containing genomic data for each patient, named '{patient_id}_genomics.csv', stored in the '/data/genomics/' directory. The clinical trials data is available as a SQLite database stored in '/data/trials.db'.
+Assuming that you have access to the 'sklearn' and 'pandas' libraries in Python, write a code snippet that:
+1. Loads all relevant patient data from EHRs (including demographics, medical history, lab results) into a Pandas DataFrame.
+2. Extracts genomic features (e.g., mutation status, gene expression levels) for each patient and stores them in separate DataFrames.
+3. Retrieves relevant clinical trials information (trial IDs, treatment arms, participant count) from the SQLite database.
+4. Develops an ensemble machine learning model using Random Forest, Gradient Boosting, and Support Vector Machines to predict breast cancer recurrence probability based on the integrated data.
+5. Evaluates the performance of the model using metrics such as accuracy, precision, recall, F1 score, and AUC-ROC curve.
+6. Identifies high-risk patients who may benefit"
+43,science,extremely challenging but theoretically possible,"Develop an AI system that can analyze satellite imagery to identify patterns of land degradation in Africa, particularly focusing on areas with high population density and agricultural activity. The system should integrate data from various sources, including NASA's Landsat 8 satellite imagery, the African Soil Information System (AfSIS), and the FAO's Global Agro-Hydrological Information Systems (AGROVOC). It should use machine learning algorithms to classify areas of land degradation into different categories based on severity.
+The system should be capable of processing large datasets from various sources, including satellite imagery, climate data, soil type information, and agricultural production data. It must also integrate with existing systems for monitoring and managing natural resources.
+Key requirements:
+- Integrate Landsat 8 satellite imagery with AfSIS and AGROVOC databases to identify areas of land degradation.
+- Use machine learning algorithms (e.g., Random Forest, Support Vector Machine) to classify land degradation severity levels based on spectral analysis of satellite images and other environmental factors.
+- Process large datasets from multiple sources using efficient algorithms and data storage solutions.
+- Integrate with existing systems for monitoring and managing natural resources, such as the African Union's African Soil Information System (AfSIS) or national-level agricultural information systems.
+System specifications:
+* Language: Python
+* Libraries/Frameworks:
+	+ Geospatial libraries like GDAL and Fiona for satellite image processing
+	+ Scikit-learn for machine learning algorithms
+	+ Pandas and Num"
+44,math,normal regularly encountered,"Develop a mathematical model that simulates the behavior of a nonlinear system with two state variables and one control variable using the Lotka-Volterra equations. The model should account for changes in population dynamics due to environmental factors.
+Given a Python library called `scipy` and an existing dataset stored in the 'Population_Data.csv' file located at '/Users/user/Documents/Data/Population_Data.csv', create a function that:
+*   Loads the dataset
+*   Fits the Lotka-Volterra model to the data using the least squares method
+*   Simulates the system behavior over a range of time points (t = 0 to t = 100)
+*   Plots the state variables and control variable as functions of time
+The 'Population_Data.csv' file contains columns for 'Time', 'Predator_Population', and 'Prey_Population'. The model should be able to capture the oscillatory behavior of the system.
+Create a new Python script called 'lotka_volterra_model.py' in the '/Users/user/Documents/Code/' directory that implements this functionality. Ensure that the script is well-documented with comments explaining each section of code. Use descriptive variable names and adhere to PEP 8 coding conventions.
+The output should be a plot showing the behavior of the system over time, including the predator population, prey population, and control variable as functions of time. The plot should be saved in the '/Users/user/Documents/Plots/' directory with the filename"
+45,coding,very hard and challenging for anyone but the best to solve,"## Complex Open-Ended Problem in Coding Sector
+### Problem Statement
+Replicate the implementation of a real-time anomaly detection system using historical stock data, akin to what is described in ""Financial Time Series Analysis by Example"" by Professor Robert P. Hogg's book on 'Real time Anomaly Detection'. Given a directory containing csv files with names like AAPL_2020.csv, GOOG_2021.csv, etc., where each file contains stock price data with columns of Date, Open, High, Low, Close and Volume. Develop an algorithm that can detect anomalies (e.g., unusually high or low trading volumes) in real-time using a moving window approach (7-day window for this problem).
+### Requirements
+*   Use Python 3.9 as the primary language.
+*   Utilize libraries such as Pandas, NumPy, and Scikit-learn for data manipulation and anomaly detection.
+*   Develop an efficient solution that can handle at least 1000 stock ticker files with 365 trading days each.
+*   Create a new CSV file called 'anomalies.csv' containing the ticker symbol of each detected anomaly along with its timestamp.
+### Additional Considerations
+*   Implement data normalization to ensure that the feature scaling is consistent across all stock tickers.
+*   Choose an appropriate threshold for determining anomalies based on historical data. You may need to experiment with different thresholds or use a statistical method such as the Z-score method to determine the anomaly score.
+*"
+46,factual,nearly impossible,"#### Problem: Real-time Traffic Prediction Using Machine Learning and Sensor Data
+Given a folder named 'Traffic_Data' containing CSV files with sensor data from traffic cameras, predict real-time traffic congestion levels using machine learning techniques.
+**Data Description:**
+- Each file has the following columns: Date, Time, Camera_ID, Speed, Occupancy, Road_Type.
+- The speed is measured in km/h and occupancy is a percentage value.
+- There are 20 cameras with IDs from C1 to C20.
+**Task:**
+Using Python and the scikit-learn library, develop a model that can predict real-time traffic congestion levels for each camera based on historical data. The model should use a combination of supervised learning algorithms (Decision Trees, Random Forests) and unsupervised techniques (K-Means clustering).
+**Requirements:**
+1. Read sensor data from the CSV files in 'Traffic_Data' folder.
+2. Preprocess the data to handle missing values and normalize speed and occupancy features.
+3. Split the data into training (~70%) and testing sets (~30%).
+4. Use Decision Trees and Random Forests for supervised learning to predict congestion levels (high, medium, low) based on historical data.
+5. Apply K-Means clustering to group cameras with similar traffic patterns.
+6. Develop a function that takes the current time and sensor readings as input and returns predicted congestion levels for each camera.
+7. Create a new CSV file named 'congestion_levels"
+47,heuristics,extremely challenging but theoretically possible,"Design an AI system that can analyze a large dataset of medical records stored in a database located at `path/to/medical_records.db` and predict patient outcomes based on historical data using a combination of clustering, decision trees, and support vector machines.
+Given the complexity of medical data, consider integrating techniques from natural language processing to extract relevant information from unstructured text fields such as doctor's notes or patient complaints stored in the `notes` table. The system should output a predictive model that can be used for future patient outcomes predictions.
+The dataset contains the following tables:
+- `patients`: with columns `patient_id`, `age`, `sex`
+- `medical_history`: with columns `patient_id`, `disease`, `treatment`
+- `lab_results`: with columns `patient_id`, `test_name`, `result`
+- `notes`: with columns `patient_id`, `note`
+The system should be able to handle large-scale data processing and provide a high degree of accuracy in predicting patient outcomes.
+Use Python as the primary programming language, with libraries such as Pandas for data manipulation, Scikit-learn for machine learning tasks, and NLTK or spaCy for natural language processing. Assume that you have access to a computer cluster with ample storage and computational resources.
+### Additional Requirements
+- The system should be able to handle missing values in the dataset.
+- The model should be able to explain its predictions using SHAP values or similar techniques.
+- Provide a detailed report on the performance"
+48,medical,normal regularly encountered,"Develop an AI system that predicts patient outcomes based on medical imaging data from MRI scans. Given a dataset of 10,000 MRI images in the 'MRI_Data' folder, organized by patient ID and scan date in subfolders as '{patient_id}/{scan_date}/image.nii.gz', where each .nii.gz file represents a single 3D MRI image.
+The dataset contains several types of medical imaging modalities including T1-weighted (T1W), T2-weighted (T2W), and Proton Density (PD) images. The task is to train a deep learning model using the Keras library in Python that can predict patient outcomes such as survival rate, disease progression, or treatment response based on these imaging features.
+The model should be able to handle variable-length 3D image inputs, extract relevant features, and make accurate predictions. You are given access to a separate folder 'patient_outcomes' containing CSV files with the patient outcome labels for each MRI scan in the format 'patient_id,scan_date,outcome'.
+Your solution should:
+1. Load the MRI data from the 'MRI_Data' folder into a Keras-compatible format.
+2. Preprocess the images by normalizing pixel values and applying any necessary transformations (e.g., rotation, flipping).
+3. Define a deep neural network architecture using Keras that can learn spatial hierarchies of features from the 3D image inputs.
+4. Train the model on the preprocessed data, using a"
+49,science,very hard and challenging for anyone but the best to solve,"Generate a complex, open-ended problem in the science sector:
+Design an AI-driven system to predict the trajectory of hurricanes based on historical climate data and real-time satellite imagery. The system should integrate with NASA's Giovanni dataset (https://giovanni.gsfc.nasa.gov) for sea surface temperature, wind speed, and ocean currents.
+Given a directory that contains CSV files named 'hurricane_data.csv' and 'satellite_imagery.csv', each containing:
+- 'hurricane_data.csv': Columns for hurricane name, date, latitude, longitude, maximum wind speed, and category (1-5)
+- 'satellite_imagery.csv': Columns for image timestamp, latitude, longitude, cloud cover percentage, and sea surface temperature
+Using Python with the following libraries: NumPy, pandas, Matplotlib, Scikit-image, and Scikit-learn. Your task is to:
+1. Clean and preprocess the data using techniques like handling missing values, encoding categorical variables, and normalizing features.
+2. Implement a deep learning model (e.g., CNN or LSTM) that can predict the future trajectory of hurricanes based on historical climate data and real-time satellite imagery.
+3. Train and evaluate your model using a dataset of past hurricane events and assess its performance metrics like mean absolute error (MAE), mean squared error (MSE), and R-squared value.
+4. Integrate your system with NASA's Giovanni dataset to fetch real-time sea surface temperature, wind speed, and ocean currents data"
+50,math,nearly impossible,"Develop an algorithm that models the growth patterns of a given type of tree species based on historical climate data. Utilize Python with libraries like pandas, NumPy, and scikit-learn.
+Given a dataset stored in a CSV file named 'climate_data.csv', located at '/home/user/Documents/datasets/', which contains columns for:
+- Year
+- Temperature (in Celsius)
+- Precipitation (in mm)
+- Soil Moisture (%)
+and another CSV file named 'tree_growth_data.csv', located at '/home/user/Documents/datasets/', containing the following columns:
+- Tree ID
+- Year
+- Diameter (at breast height, in cm)
+- Height (in meters)
+- Biomass (in kg)
+Create a model that predicts the diameter of trees for a given year based on historical climate data. The algorithm should account for non-linear relationships between tree growth and environmental factors.
+Use k-means clustering to group similar tree species together based on their growth patterns. Then, apply a machine learning approach, such as a random forest regressor or support vector regression, to predict the diameter of trees for a given year and climate conditions.
+Output your results in a new CSV file named 'predicted_diameter.csv', located at '/home/user/Documents/results/', containing the predicted diameters for each tree along with their corresponding cluster labels.
+Ensure that your code is well-documented and includes necessary comments explaining your approach. Also, provide a brief description of the model's performance using metrics like mean absolute"
+51,coding,extremely challenging but theoretically possible,"Develop an AI system that generates 3D models of buildings based on architectural floor plans. The system should take as input a folder containing PDFs of the floor plans and output a 3D model in STL format.
+Given a folder named 'Floor_Plan_Docs' located at '/Users/John/Documents/Projects/AI_System', with the following structure:
+- Folder 'Floor_Plan_Docs'
+    - File 'Floor_Plan_1.pdf'
+    - File 'Floor_Plan_2.pdf'
+    - ...
+    - File 'Floor_Plan_N.pdf'
+The system should:
+1. Use Python as the primary language and the libraries PyPDF2 for PDF parsing, OpenCV for image processing, and Trimesh for 3D modeling.
+2. Parse each PDF to extract the floor layout information (e.g., room dimensions, door locations).
+3. Convert the extracted data into a format suitable for 3D modeling.
+4. Use computer vision techniques to identify architectural features such as walls, windows, doors, and stairs from the floor plan images.
+5. Generate 3D models of each floor plan using the Trimesh library.
+6. Combine the individual 3D models into a single model representing the entire building.
+7. Export the final 3D model in STL format to a file named 'Building_Model.stl' located at '/Users/John/Documents/Projects/AI_System'.
+Note: The system should be able to handle varying"
+52,factual,normal regularly encountered,"""Imagine you are a data analyst at an e-commerce company that sells clothing. You have been tasked with predicting customer churn based on purchase history and demographic information.
+You have a dataset stored in the 'customer_data.csv' file located in the '/data/ecommerce/' folder, which contains the following columns:
+- Customer ID
+- Purchase History (a list of dates and product IDs)
+- Age
+- Gender
+- Income Level
+Your task is to develop a predictive model that can identify customers who are likely to churn within the next 6 months. You should use a supervised learning approach and a relevant algorithm (e.g., logistic regression, decision tree, random forest).
+Create a new Python script called 'customer_churn_model.py' in the '/src/models/' folder that performs the following tasks:
+1. Load the customer data from the 'customer_data.csv' file.
+2. Preprocess the data by handling missing values and encoding categorical variables (e.g., gender, income level).
+3. Split the data into training and testing sets (80% for training and 20% for testing).
+4. Train a predictive model using the preprocessed data.
+5. Evaluate the performance of the model using metrics such as accuracy, precision, recall, and F1-score.
+6. Save the trained model to a file called 'customer_churn_model.pkl' in the '/src/models/' folder.
+7. Use the trained model to predict customer churn for new data stored in the '"
+53,heuristics,very hard and challenging for anyone but the best to solve,"Here's a complex open-ended problem in the heuristics sector:
+**Problem:** 
+In the field of Reinforcement Learning, there is an ongoing debate about how to effectively balance exploration and exploitation in complex environments. A common approach is to use Upper Confidence bound Applied to Trees (UCT) algorithms, which have been successfully applied to various domains.
+Given a complex environment represented by a tree-like graph data structure, with nodes representing states and edges representing actions, can you implement an extension of the UCT algorithm that incorporates heuristics from Monte Carlo Tree Search (MCTS) to handle large action spaces? The goal is to optimize the exploration-exploitation trade-off in this environment.
+**Input:**
+*   A folder containing a file `environment_graph.csv` with the graph structure, where each row represents a node with attributes 'node_id', 'parent_node_id' (for non-root nodes), and 'action_space_size'.
+*   Another file `heuristics.csv` with precomputed heuristics for each state, including estimated rewards, action costs, and an estimate of the environment's difficulty.
+*   A Python library `networkx` to handle graph operations.
+**Objective:**
+Implement a UCT-MCTS algorithm that efficiently balances exploration and exploitation in this complex environment. The solution should:
+1.  Load the environment graph from `environment_graph.csv`.
+2.  Compute an initial heuristic evaluation for each node using the data from `heuristics.csv`.
+3"
+54,medical,nearly impossible,"Develop a predictive model that can forecast the probability of an Alzheimer's patient responding favorably to immunotherapy based on their clinical, demographic, and genomic data.
+**Given:**
+- A folder named `/patient_data` containing CSV files with the names of patients (`Patient_ID.csv`) each having columns for `Age`, `Gender`, `Genetic_Markers`, `Clinical_Symptoms`, and `Treatment_History`.
+- A text file `/genomics.txt` containing a list of gene variants associated with Alzheimer's disease.
+- A CSV file `/alzheimers_dataset.csv` containing the clinical trial data of patients who received immunotherapy, including their response (favorable or unfavorable).
+**Task:**
+1. **Data Preprocessing**: Clean and preprocess the patient data by handling missing values, normalizing categorical variables, and converting genetic markers into a format suitable for machine learning models.
+2. **Feature Engineering**: Extract relevant features from the preprocessed data that can be used to predict the response to immunotherapy. This may include creating new variables based on the clinical symptoms, treatment history, age, gender, and genomic data.
+3. **Model Selection and Training**: Choose a suitable predictive model (e.g., decision tree, random forest, neural network) and train it using the preprocessed feature set and the response variable from the alzheimers_dataset.csv file.
+4. **Hyperparameter Tuning**: Perform hyperparameter tuning to optimize the performance of the chosen model on the training"
+55,science,extremely challenging but theoretically possible,"""Develop a predictive model in R that utilizes a combination of Long Short-Term Memory (LSTM) networks and Graph Convolutional Networks (GCNs) to forecast the spread of SARS-CoV-2 in major metropolitan areas. Utilize the Johns Hopkins University's COVID-19 dataset stored in the 'COVID_Stats' folder, which includes files with names like 'New_York_City.csv', each containing columns for Date, New_Cases, Total_Cases, and Total_Deaths.
+Design an architecture that leverages LSTM to capture temporal dependencies in case numbers and GCNs to incorporate spatial relationships between metropolitan areas. Employ the following parameters:
+- LSTM: 2 hidden layers with 256 neurons each, dropout rate of 0.2
+- GCN: 3 hidden layers with 128 neurons each, ReLU activation function
+Train the model on a subset of the data (e.g., 'New_York_City.csv', 'Los_Angeles.csv') and validate it on another subset (e.g., 'Chicago.csv'). Include a section for visualizing the predicted spread using heatmaps to identify areas with high risk.
+Output the forecasted case numbers for each metropolitan area over the next 30 days, storing them in a new csv file named 'COVID_Forecasts.csv' within the 'Forecasting_Results' folder. Ensure the model's performance is evaluated using metrics such as mean absolute error (MAE) and root mean squared percentage"
+56,math,normal regularly encountered,"""Design an algorithm in Python with the pandas library to analyze a dataset of daily stock prices stored in a CSV file named 'stock_prices.csv' located at '/Users/username/Documents/project/data/'.
+The CSV file contains columns for Date, Open, High, Low, Close, and Volume. Develop a function that calculates the Moving Average Convergence Divergence (MACD) indicator and plots it along with the stock's price using the matplotlib library.
+Furthermore, implement a strategy to identify potential buy and sell signals based on the MACD crossover points. For example, if the MACD line crosses above the signal line, consider it a buy signal; conversely, if the MACD line crosses below the signal line, consider it a sell signal.
+Create a new CSV file named 'stock_signals.csv' in the same directory as the script that contains two columns: Date and Signal (with values 'Buy' or 'Sell') indicating the potential trading opportunities.
+Ensure your solution is well-documented, efficient, and scalable for future additions of stock price data."" 
+### Note:
+This problem has a realistic solution, is actionable, and requires coding skills in Python using pandas and matplotlib libraries. It also meets all other requirements specified above. The problem statement is concise yet detailed enough to be solvable without ambiguity or unnecessary assumptions.  This type of problem can be found on platforms like Kaggle or LeetCode for example.  You may need to adjust the path and file names according to your"
+57,coding,very hard and challenging for anyone but the best to solve,"## Problem: Real-Time Anomaly Detection in Financial Transactions Using Autoencoders
+**Sector:** Finance & Banking
+**Language:** Python
+**Libraries/Frameworks:** TensorFlow, NumPy, Pandas, Matplotlib, Seaborn
+In the book ""Deep Learning for Time Series Forecasting"" by Zhen Hua Hou et al., there is a section on using autoencoders to detect anomalies in real-time financial transactions. Given a dataset of transaction records stored in a CSV file named `transaction_data.csv` located in the `/data/finance/` directory, replicate this anomaly detection process using an autoencoder.
+**Dataset Description:**
+- The CSV file contains the following columns:
+  - `Transaction_ID`: Unique identifier for each transaction
+  - `Timestamp`: Time of the transaction (in seconds since epoch)
+  - `Amount`: Monetary value of the transaction
+  - `Category`: Type of category (e.g., 'credit', 'debit')
+- The dataset has a mix of normal and anomalous transactions, with anomalies being significantly larger in amount than the norm.
+**Task:**
+1. **Preprocessing**: Load the dataset into a Pandas dataframe, perform any necessary data cleaning (e.g., handling missing values), and normalize the transaction amounts using the Min-Max Scaler from Scikit-learn.
+2. **Autoencoder Architecture**: Design and implement an autoencoder model with the following components:
+   - Encoder: 2 fully connected layers with"
+58,factual,nearly impossible,"Implement a natural-language-processing (NLP) system that can summarize long documents in various domains while maintaining semantic accuracy. The system should be able to recognize and incorporate nuanced language, idioms, and context-dependent expressions from the text.
+The NLP system will process text files from the ""documents"" folder, which contains subfolders for different domains such as finance, science, history, etc. Each domain folder has a set of .txt files with long documents.
+Using Python and the NLTK library, write a function that:
+- Tokenizes and parses the text into sentences
+- Identifies key phrases using named entity recognition (NER)
+- Applies sentiment analysis to determine the emotional tone of each sentence
+- Clusters similar sentences based on their content and sentiment
+The system should produce a summary for each document in the form of a list of sentences, where each sentence is represented as a tuple containing the original text, key phrases, sentiment score, and cluster label.
+Save the summaries to a new .txt file in the ""summaries"" folder with the same name as the original document.
+The system should be able to handle documents with varying lengths and complexities, and should be able to maintain semantic accuracy even when dealing with nuanced language and idioms.
+### Hint:
+You can use the following libraries:
+- NLTK for tokenization and named entity recognition
+- spaCy for sentiment analysis
+- scikit-learn for clustering
+The system should be able to handle documents with varying lengths and complexities"
+59,heuristics,extremely challenging but theoretically possible,"### Problem 1: Heuristics for Optimal Route Planning in a Dynamic Fleet Management System
+#### Background
+Imagine you are working with an e-commerce company that specializes in same-day delivery. They have a large fleet of electric vehicles and a logistics system that needs to be optimized daily based on demand, traffic patterns, and vehicle availability.
+#### Problem Statement
+You need to develop a heuristic algorithm (e.g., Genetic Algorithm, Ant Colony Optimization) to determine the most efficient routes for their delivery vans in real-time. The goal is to minimize fuel consumption while ensuring all packages are delivered within a 3-hour window.
+#### Data Availability
+- A CSV file (`fleet_data.csv`) containing information about each vehicle:
+    - `Vehicle_ID` (unique identifier)
+    - `Battery_Level` (%)
+    - `Current_Location` (latitude and longitude)
+    - `Available_Driver`
+- Another CSV file (`package_requests.csv`) with all package pickups and drop-offs for the day, including:
+    - `Package_ID`
+    - `Pickup_Location` (latitude and longitude)
+    - `Dropoff_Location` (latitude and longitude)
+    - `Priority_Level` (high/medium/low)
+#### Requirements
+1. **Route Optimization**: Develop a heuristic algorithm to generate routes for each vehicle that minimize fuel consumption, taking into account the current locations of vehicles and drivers, traffic patterns (available through an API), and package priority levels.
+2. **Real-time Updates**:"
+60,medical,normal regularly encountered,"Develop a Python script that integrates machine learning with medical imaging analysis. Utilizing a dataset of MRI scans (e.g., from the ""BRATS"" challenge), train and evaluate a model capable of segmenting glioblastoma tumors in brain images.
+Given a directory containing MRI scan files stored as DICOM format, your task is to:
+- Load and preprocess the DICOM images using libraries such as `pydicom` or `dcm` for reading and converting the data.
+- Apply necessary image processing techniques (e.g., normalization, filtering) to enhance the quality of the images.
+- Utilize a machine learning library like TensorFlow or PyTorch to develop a segmentation model that can identify glioblastoma tumors in the preprocessed images.
+- Train the model using a labeled dataset where each MRI scan is annotated with its corresponding tumor regions.
+- Evaluate the performance of your model on unseen data, assessing metrics such as precision, recall, and F1 score for the segmentation task.
+Your solution should include:
+* A detailed explanation of the preprocessing steps applied to the DICOM images
+* Code snippets illustrating how you load and preprocess the MRI scans
+* Implementation details of the machine learning model used for tumor segmentation
+* Results from evaluating your model on a test dataset, including any visualizations or metrics that demonstrate its performance
+Assume you have access to a directory named `/path/to/MRI/scans` containing the DICOM files. Save your final code in a file called `"
+61,science,very hard and challenging for anyone but the best to solve,"Here is a complex, open-ended problem in the science sector:
+Develop an algorithm to classify galaxy morphologies using deep learning techniques. Given a dataset of 10,000 galaxies with their corresponding images (256x256 pixels) stored in the 'Galaxy_Images' folder and metadata (e.g., redshift, stellar mass, etc.) in the 'Galaxy_Metadata.csv' file, train a convolutional neural network (CNN) to classify these galaxies into one of the following categories: Spiral, Elliptical, Irregular, or Uncertain.
+The images are stored in JPEG format and have been preprocessed by subtracting the median pixel value and dividing by 1000. The metadata includes information on the galaxy's redshift, stellar mass, and other relevant features.
+Your task is to develop a CNN architecture that can accurately classify these galaxies based on their morphological features. You should also implement techniques to handle class imbalance (since Uncertain class has fewer instances) and overfitting.
+Finally, create a new folder 'Galaxy_Classifications' with two subfolders: 'Predictions' and 'Results'. The 'Predictions' folder should contain the predicted labels for each galaxy image, while the 'Results' folder should contain a summary of the classification accuracy metrics (e.g., precision, recall, F1-score).
+**Requirements:**
+* Use Python 3.8 as the programming language.
+* Utilize the TensorFlow library for building and training the CNN model."
+62,math,nearly impossible,"Develop a Python program using scikit-learn library that can read data from a text file named 'stock_data.txt', which is located in the folder '/home/user/Documents/StockData'. The text file contains historical stock prices of various companies with their ticker symbol, date, and closing price.
+Create a function called 'generate_sector_indicators' that takes as input a pandas DataFrame containing the stock data and returns a new DataFrame with additional columns for sector indicators. These indicators should include:
+    - Moving averages (MA) of 50 days and 200 days
+    - Relative Strength Index (RSI)
+    - Bollinger Bands
+    - Average True Range (ATR)
+The function 'generate_sector_indicators' should be able to handle missing values in the input DataFrame. The new DataFrame with sector indicators should have the same index as the original DataFrame.
+Furthermore, write a second function called 'identify_trend_direction' that takes as input the DataFrame with sector indicators and returns a new Series containing the predicted trend direction for each stock based on its sector indicators.
+The function 'identify_trend_direction' should use a machine learning model (e.g., decision tree classifier) to predict the trend direction. The model should be trained using a separate dataset that is stored in a CSV file named 'sector_indicators_train.csv', which is located in the folder '/home/user/Documents/StockData'.
+The program should also create two new CSV files: one for the sector indicators ('sector_ind"
+63,coding,extremely challenging but theoretically possible,"Create a natural language processing (NLP) system capable of generating comprehensive summaries of financial news articles from various sources, similar to those found on Bloomberg or CNBC. The system should analyze the sentiment of the articles and identify key takeaways, such as stock price predictions, market trends, and economic indicators.
+Given a folder named 'Financial_News' containing text files with the names of {date}_news.txt, where each file contains a single article from a specific source (e.g., Bloomberg or CNBC), can you develop an NLP pipeline that:
+1. Tokenizes and part-of-speech tags the text in each article.
+2. Identifies and extracts key phrases and entities related to stocks, companies, and economic indicators.
+3. Analyzes the sentiment of the article using a suitable sentiment analysis library (e.g., NLTK's VADER or TextBlob).
+4. Generates a summary of the article, focusing on key takeaways such as stock price predictions, market trends, and economic indicators.
+The system should output a new text file called 'news_summaries.txt' in the same folder, containing a comprehensive summary of each article, along with its sentiment analysis and key takeaways.
+Use Python 3.x as the programming language and leverage libraries such as NLTK, spaCy, and TextBlob for NLP tasks. Ensure that your solution is efficient, scalable, and capable of handling large volumes of financial news articles.
+Files to use:
+- 'Financial_News' folder"
+64,factual,normal regularly encountered,"Develop a Python script using the Scikit-learn library that extracts features from a dataset of tweets related to climate change, then trains and evaluates a random forest classifier on these features to predict whether a tweet is about climate change or not. The dataset is stored in a CSV file named 'tweets.csv' located at '/home/user/Downloads/datasets/tweets'.
+The CSV file has the following structure:
+- `id`: A unique identifier for each tweet
+- `text`: The text of the tweet
+- `label`: Whether the tweet is about climate change (1) or not (0)
+Your task is to:
+1. Preprocess the text data by removing stop words, lemmatizing words, and converting all text to lowercase.
+2. Extract features from the preprocessed text using a combination of techniques such as bag-of-words, TF-IDF, and word embeddings (Word2Vec).
+3. Train a random forest classifier on these features to predict whether a tweet is about climate change or not.
+4. Evaluate the performance of the model using metrics such as accuracy, precision, recall, and F1-score.
+5. Save the trained model and its evaluation metrics in separate CSV files named 'model.csv' and 'evaluation_metrics.csv', respectively.
+Assume that you have the necessary libraries installed, including Scikit-learn and NLTK for text preprocessing.
+The goal is to create a robust model that can accurately classify tweets about climate change from those that are not."
+65,heuristics,very hard and challenging for anyone but the best to solve,"### Problem: Heuristics Sector - Adaptive Control System for Wind Farms
+Given a real-world scenario where wind farms are facing increasing operating costs due to inefficient energy production and variable weather conditions, implement an adaptive control system that can optimize the energy output of these wind farms in real-time.
+### Background:
+*   The data is provided in two csv files: 'WindFarm_Data.csv' containing columns for Date, Wind Speed (m/s), Direction (degrees), Temperature (Celsius), and Energy Output (MW) and 'Weather_Forecast.csv' containing columns for Date, Weather Type (sunny/cloudy/rainy), Wind Direction Forecast (degrees), and Temperature Forecast (Celsius).
+*   The wind farm consists of 50 turbines, each with its unique characteristics.
+*   Your task is to develop a robust adaptive control system that can adjust the operating parameters of each turbine in real-time based on current weather conditions, forecasts, and historical data.
+### Requirements:
+1.  Implement a machine learning algorithm using Python and relevant libraries (e.g., scikit-learn, pandas, numpy) to predict energy output for each turbine based on its characteristics and weather conditions.
+2.  Utilize the predicted energy output to determine an optimal operating speed for each turbine that maximizes overall wind farm energy production while minimizing wear and tear on the turbines.
+3.  Develop a control algorithm using Python and relevant libraries (e.g., control systems library, scipy) to adjust the operating parameters"
+66,medical,nearly impossible,"Develop an AI system that can predict patient outcomes for heart failure patients using ECG data collected from wearable devices. The system should incorporate a deep learning model and integrate with electronic health records (EHRs) to provide personalized treatment recommendations.
+Given the dataset 'Heart Failure ECG Data' stored in the '/ecg_data/' folder, which contains CSV files named after the patient's ID (e.g., 'patient_001.csv'), each file containing the following columns: 
+- Date of recording
+- Time of day
+- Heart rate
+- P-wave duration
+- QRS complex width
+- T-wave amplitude
+- ECG signal data
+The system should:
+1. Preprocess the raw ECG signals using a combination of time and frequency domain analysis, including filtering, normalization, and feature extraction.
+2. Train a deep learning model (e.g., CNN or LSTM) on the preprocessed data to predict patient outcomes based on the following metrics:
+	* All-cause mortality
+	* Hospitalization due to heart failure
+	* Quality of life
+3. Integrate with EHRs stored in the '/ehr_data/' folder, which contains CSV files named after the patient's ID (e.g., 'patient_001_ehr.csv'), each file containing additional clinical information such as:
+	* Medical history
+	* Medications
+	* Lab results
+4. Develop a user interface to visualize patient outcomes and treatment recommendations, using libraries such as Matplotlib and"
+67,science,extremely challenging but theoretically possible,"Generate a complex open-ended problem in the science sector.
+**Problem:**
+Develop an AI-powered framework that integrates machine learning with computational fluid dynamics (CFD) simulations to predict and mitigate the effects of ocean acidification on marine ecosystems. 
+Given a set of high-resolution oceanographic data stored in a folder named ""Ocean_Data"" containing files with names in the format ""{location}.csv"", where each file contains columns for Date, Temperature, Salinity, pH, and Dissolved Oxygen levels.
+Using Python 3.x as the primary scripting language, implement a deep learning model that takes into account the spatial and temporal variability of these factors to predict the impact on marine life. The model should be able to forecast the effects of ocean acidification on coral reefs, fisheries, and other critical ecosystems within a specified area (e.g., the Great Barrier Reef).
+The framework should comprise the following components:
+1.  Data Preprocessing: Clean and preprocess the data using techniques such as normalization, imputation, and feature scaling.
+2.  CFD Simulations: Utilize an existing CFD library like OpenFOAM or PyFR to simulate the ocean currents, temperature, and chemistry.
+3.  Machine Learning Model: Train a deep learning model (e.g., CNN, LSTM) that integrates the preprocessed data with the CFD simulations to predict the effects of ocean acidification on marine ecosystems.
+4.  Visualization Tools: Develop interactive visualizations using libraries like Matplotlib, Seaborn"
+68,math,normal regularly encountered,"**Problem: Predicting Power Grid Demand with Time Series Analysis**
+In the field of electrical engineering, predicting power grid demand is crucial for ensuring a stable and efficient energy supply. You are given a dataset containing historical power consumption data from various regions in a country.
+**Dataset:** `Power_Grid_Data.csv` located at `/Users/username/Documents/Data/`
+The CSV file contains the following columns:
+- `Date`: Date of consumption
+- `Region`: Region of consumption (e.g., North, South, East)
+- `Consumption`: Total power consumption in megawatts
+Using Python with libraries pandas and statsmodels for time series analysis, write a script to:
+1. **Trend Analysis**: Apply a suitable trend analysis technique (e.g., linear or exponential) to identify the overall pattern of power consumption over time.
+2. **Seasonality Analysis**: Identify periodic patterns in the data using seasonal decomposition techniques (e.g., STL or SES).
+3. **ARIMA Modeling**: Develop an ARIMA model that captures both trends and seasonality, predicting future power grid demand for a specified horizon (e.g., 30 days ahead).
+**Output:**
+- A new CSV file named `Predictions.csv` located at `/Users/username/Documents/Data/` containing the predicted power consumption for each region over the specified horizon.
+- A line graph showing the actual and predicted values of power consumption for one specific region.
+**Note:** Ensure your script is well-documented, readable,"
+69,coding,very hard and challenging for anyone but the best to solve,"Create a complex, open-ended problem in the coding sector:
+**Problem:**
+Replicate the analysis from the paper ""Neural Architecture Search with Reinforcement Learning"" by Zoph and Le (2017) using the Keras library in Python. Given the folder that contains files with the names of {model_name}.h5 with the h5 file containing the layers and weights of a neural network model, can you:
+*   Implement a custom reinforcement learning algorithm to search for the optimal architecture among the given models
+*   Train each model on the CIFAR-10 dataset using the TensorFlow backend
+*   Evaluate the performance of each model by calculating its top-1 accuracy on the test set
+*   Visualize the evolution of the optimal architecture over time using a heatmap or scatter plot
+**Specific Requirements:**
+*   Use Keras with TensorFlow as the backend
+*   Utilize the `keras.utils.Sequence` class to create data generators for training and validation
+*   Implement a custom reinforcement learning algorithm, such as Q-learning or SARSA
+*   Use the `keras.models.load_model` function to load pre-trained models from the {model_name}.h5 files
+**File Paths:**
+*   Assume that the folder containing the model files is located at `/path/to/models/`
+*   The CIFAR-10 dataset is stored in the `/path/to/cifar10/` directory
+*   The results should be saved to a new folder named"
+70,factual,nearly impossible,"Develop an AI model that predicts the likelihood of a financial institution's collapse based on macroeconomic indicators such as inflation rate, GDP growth rate, unemployment rate, and interest rates. 
+Given a dataset containing historical data of these indicators for various countries from 1990 to 2022 stored in the 'Economic_Indicators' folder with subfolders for each country.
+Your task is to create a predictive model using Python and its relevant libraries (e.g., pandas, NumPy, scikit-learn) that forecasts the probability of collapse for a given set of macroeconomic indicators. 
+The model should be able to handle missing values and outliers and ideally provide an explanation of how each indicator contributes to the prediction.
+Output your results as a csv file named 'collapse_predictions.csv' containing the country name, predicted probability of collapse, and a breakdown of the contribution of each indicator.
+### Hint:
+You may want to start by exploring the dataset using pandas and visualizing the relationships between indicators. Then use techniques such as feature scaling, dimensionality reduction (e.g., PCA), and ensemble methods (e.g., Random Forest) to improve model performance. Consider using a library like ELI5 to provide an explanation of the prediction.
+### Additional Requirements:
+- The model should be able to handle categorical variables (country names).
+- The predictions should be made in a multi-step process where each country's data is evaluated separately.
+- You are allowed to assume that there will be no new indicators added outside"
+71,heuristics,extremely challenging but theoretically possible,"Develop an AI that can generate real-time personalized dietary recommendations based on a user's health goals, medical conditions, food preferences, and genetic information using Python with the following specifications:
+- The AI should incorporate machine learning models to analyze nutritional data from reputable sources (e.g., USDA database) and user-provided input.
+- Utilize natural language processing techniques to understand user queries and generate tailored responses that include recommended foods, recipes, and meal plans.
+- Leverage a genetic algorithm to optimize the dietary recommendations based on factors such as caloric intake, macronutrient balance, and nutrient-dense food selection.
+- Integrate with popular health tracking apps (e.g., Apple Health, Google Fit) to collect user data and provide seamless integration.
+- Ensure that all interactions are secure and compliant with GDPR regulations.
+Assume you have access to the following datasets:
+- A large collection of nutritional information from reputable sources (e.g., USDA database)
+- A dataset of genetic variants associated with various health conditions
+- A corpus of text containing user queries, dietary recommendations, and meal plans
+Use the following libraries and frameworks:
+- scikit-learn for machine learning tasks
+- spaCy for natural language processing
+- pandas for data manipulation
+- NumPy for numerical computations
+- Flask or Django for web development
+- PostgreSQL or MySQL for database management
+Deliverables:
+- A detailed report outlining the AI architecture, machine learning models, and genetic algorithm optimization
+- A working prototype of the"
+72,medical,normal regularly encountered,"In the field of healthcare informatics, there's a pressing need to improve patient outcomes through personalized medicine. 
+Given a dataset containing comprehensive genomic and clinical information for patients with breast cancer stored in the 'Breast_Cancer_Data' folder with files named {patient_id}.csv, where each csv file contains columns of Patient ID, Age, Sex, Genomic Data (in JSON format), Treatment History, Clinical Outcomes.
+Develop an algorithm to integrate the genomic data into a unified framework for predicting patient responses to various treatments. 
+Utilizing natural language processing and machine learning libraries in Python, create a pipeline that:
+1. Extracts relevant genetic information from the JSON formatted genomic data.
+2. Maps this information onto clinically meaningful features (e.g., gene expression levels).
+3. Trains a predictive model (e.g., Random Forest, Gradient Boosting) to forecast treatment efficacy for new patients based on their genomic profile and clinical history.
+### Deliverables:
+- A Python script that integrates the required libraries and frameworks (e.g., pandas, numpy, scikit-learn, json).
+- A 'predictive_model' directory containing the trained model and any necessary configuration files.
+- A 'unified_framework' directory with the pipeline for data preprocessing and feature extraction.
+### Note:
+This is a high-level problem statement. You are expected to break it down into actionable steps, manage dependencies, and implement efficient solutions using Python libraries. Ensure your solution is well-documented and follows best practices for"
+73,science,very hard and challenging for anyone but the best to solve,"Develop an AI model that forecasts the likelihood of a new species being discovered in a given region based on historical data from the 'SpeciesDiscoveryDatabase.csv' file, which contains columns for geographical location (Latitude and Longitude), environmental conditions (Temperature, Humidity, and Precipitation), and historical discovery counts. The model should integrate both spatial and temporal factors using a deep learning approach.
+Utilize Python with TensorFlow or PyTorch libraries and incorporate the following:
+1.  **Spatial Autoregression**: Use a spatial autoregression model to account for regional patterns in species discovery.
+2.  **Temporal Analysis**: Incorporate a Recurrent Neural Network (RNN) or Long Short-Term Memory (LSTM) network to capture temporal dependencies in historical data.
+3.  **Deep Learning Integration**: Combine the spatial and temporal components using a deep learning architecture, such as a Convolutional Neural Network (CNN) or a Graph Convolutional Network (GCN), to learn complex relationships between geographical location, environmental conditions, and discovery likelihood.
+4.  **Uncertainty Quantification**: Implement Bayesian neural networks or Monte Carlo dropout to quantify the uncertainty in the model's predictions.
+Output:
+*   A Python script (`species_discovery_model.py`) that trains and evaluates the model using the provided dataset (`SpeciesDiscoveryDatabase.csv`).
+*   A CSV file (`new_species_likelihoods.csv`) containing the predicted likelihood of discovering a new species in each region, along with the corresponding geographical location"
+74,math,nearly impossible,"Given the book 'Nonlinear Dimensionality Reduction Techniques for High-Dimensional Data' there is a section on applying Diffusion Maps to identify underlying patterns in high-dimensional data sets. Given a folder that contains files with the names of {dataset}.csv with the csv containing the columns of ID, X1, X2, ..., Xn where n represents the number of features and 'dimension.csv' file contains the true dimensionality of each dataset.
+Can you replicate the application of Diffusion Maps using the data in the 'High_Dimensional_Data' folder to identify the underlying patterns and project the high-dimensional data onto a 3D manifold? Ideally, you should use the Python library scikit-learn and create a new csv that has the ID of the data point and its corresponding coordinates on the 3D manifold called 'projected_data.csv'. 
+Assume that you have access to a machine with at least 64 GB of RAM. You are also given a function `diffusion_kernel` that computes the diffusion kernel for a given dataset.
+```python
+import numpy as np
+from sklearn.manifold import DiffMap
+import pandas as pd
+def diffusion_kernel(X, n_neighbors=10):
+    # This is a placeholder function, you should implement the actual logic for computing the diffusion kernel
+    return X @ np.random.rand(*X.shape)
+def main():
+    # Load the datasets from the folder 'High_Dimensional_Data'
+    datasets = []
+    for file in os.listdir"
+75,coding,extremely challenging but theoretically possible,"Develop an AI system that utilizes deep learning to predict stock prices based on historical data from multiple sources. The system should integrate sentiment analysis from Twitter, news articles, and financial reports to generate a comprehensive view of market trends.
+Given the following dataset folders:
+- `Twitter_Data`: CSV files containing tweets with metadata (e.g., date, time, user ID) in `{ticker}.csv` format.
+- `News_Articles`: A folder containing JSON files with news article data in `{ticker}_news.json` format.
+- `Financial_Reports`: A folder with PDF files of financial reports for each company in `{ticker}_financial_report.pdf` format.
+- `Historical_Data`: CSV files containing historical stock price data in `{ticker}.csv` format.
+Design an architecture that leverages TensorFlow and Keras to:
+1. Preprocess the data from multiple sources (e.g., text normalization, tokenization).
+2. Train a deep learning model to predict stock prices based on integrated features (e.g., sentiment scores, time-series analysis).
+3. Integrate with a visualization tool (e.g., Matplotlib, Plotly) to display predicted price movements and real-time market trends.
+The system should be able to handle multiple tickers simultaneously and generate predictions for the next trading day. The architecture should also include a mechanism for continuous learning and updating of models based on new data ingestion.
+**Requirements:**
+- Use TensorFlow 2.x with Keras API.
+- Utilize libraries such"
+76,factual,normal regularly encountered,"Create a complex open-ended problem in the factual sector:
+**Problem Statement:**
+In the context of climate modeling, we're tasked with analyzing global temperature anomalies from 1960 to 2022. Given a dataset containing monthly mean temperatures from various weather stations across the globe (stored in a CSV file named `global_temps.csv` located at `/home/user/data/`), replicate a study on spatial pattern decomposition using empirical orthogonal function analysis (EOF) with three components.
+**Task:**
+1.  Load the data into a pandas DataFrame.
+2.  Interpolate missing values using linear interpolation.
+3.  Apply EOF analysis to decompose the temperature anomalies into three principal patterns.
+4.  Create a new CSV file named `eof_patterns.csv` located at `/home/user/results/` containing the first three EOF components (EOF1, EOF2, and EOF3) along with their respective variances.
+5.  Visualize each component using a contour plot to display the spatial pattern of temperature anomalies.
+**Additional Requirements:**
+*   Utilize the `xarray` library for data manipulation and analysis.
+*   Employ the `matplotlib` library for creating contour plots.
+*   Ensure your code is well-documented with comments explaining each step of the process.
+*   Provide a brief discussion on the implications of your findings.
+**File Paths:**
+*   Input data: `/home/user/data/global_temps.csv`
+*   Output patterns: `/home/user/results/eof"
+77,heuristics,very hard and challenging for anyone but the best to solve,"""Design a multi-agent system that models the dynamic behavior of a complex urban transportation network using agent-based modeling. The system should simulate the movement of vehicles, pedestrians, and public transit systems within the city limits.
+Given a set of GIS data stored in the 'Urban_Transportation_GIS' folder containing information on road networks, traffic signals, pedestrian crossings, and public transit routes, implement a heuristic search algorithm to optimize the routing of emergency services (e.g., ambulances) during peak hours. The system should:
+1.  Use a combination of k-means clustering and density-based spatial clustering of applications with noise (DBSCAN) to group similar geographic locations based on their traffic patterns.
+2.  Employ an ant colony optimization (ACO) algorithm to determine the most efficient routes for emergency services, considering factors such as traffic congestion, road conditions, and pedestrian activity.
+3.  Develop a web-based interface using Python's Flask framework to visualize the transportation network, display real-time traffic updates, and provide users with route recommendations.
+4.  Integrate with external data sources (e.g., weather APIs) to account for environmental factors that may impact traffic flow.
+Deliverables:
+*   A detailed technical report outlining the system architecture, algorithmic design, and implementation details
+*   A Python codebase implementing the multi-agent system, heuristic search algorithms, and web interface
+*   A dataset of optimized emergency service routes stored in a CSV file named 'optimized_routes.csv'"
+78,medical,nearly impossible,"Develop an AI system that can predict patient readmission rates based on historical data from electronic health records (EHRs) in a hospital setting. The dataset includes:
+- Demographic information: age, sex, marital status
+- Medical history: previous diagnoses, surgeries, medications
+- Clinical data: vital signs, lab results, treatment plans
+- Social determinants of health: insurance status, housing stability, education level
+The goal is to create a predictive model that identifies patients at high risk of readmission within 30 days of discharge. The system should be able to:
+1. Handle missing values and outliers in the data.
+2. Perform feature engineering to select relevant variables for prediction.
+3. Train a machine learning model (e.g., random forest, gradient boosting) on the preprocessed data.
+4. Evaluate the model's performance using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC score.
+5. Provide an interpretability report that explains the contribution of each feature to the prediction.
+The system should be able to handle a large dataset with millions of rows and thousands of columns. The solution should include:
+- A detailed description of the data preprocessing steps
+- Code snippets in Python using libraries such as Pandas, NumPy, Scikit-learn, and Matplotlib for data visualization
+- Explanation of the feature engineering process
+- Results from the machine learning model training and evaluation
+- Interpretability report with feature importance scores
+The system should"
+79,science,extremely challenging but theoretically possible,"Develop an AI model that can predict the optimal concentration of a specific mixture of chemicals used in 3D printing, given various environmental and material properties. 
+Assume you have access to a dataset containing historical data on successful prints, including:
+- The type of plastic used (PETG, PLA, ABS)
+- Environmental conditions during print (temperature, humidity, air pressure)
+- Material properties of the plastic (melt flow rate, tensile strength, density)
+- Chemical mixture composition used in the print
+- Optimal concentration of chemicals for each print
+This dataset is stored in a CSV file named 'Print_Database.csv' located in the '/home/user/Documents/Data/' directory.
+Your task is to:
+1. Preprocess the data by handling missing values and outliers, scaling continuous variables, and encoding categorical variables.
+2. Split the data into training and testing sets (70% for training and 30% for testing).
+3. Develop a machine learning model that can predict the optimal concentration of chemicals given various environmental and material properties. You should consider using techniques like hyperparameter tuning, cross-validation, and feature selection to improve the model's performance.
+4. Evaluate the model's performance on the test set using metrics such as mean absolute error (MAE), mean squared error (MSE), and coefficient of determination (R-squared).
+5. Use a library or framework that supports gradient boosting and provides an efficient way to handle complex interactions between variables, such as LightGBM."
+80,math,normal regularly encountered,"A complex open-ended math sector problem is:
+""Consider a dynamic inventory system where a retail store manages its stock levels of various products across different warehouses and distribution centers. The store receives weekly shipments of new stock, each with a specific quantity, warehouse location, and product code. The store's goal is to minimize the total cost associated with holding inventory while maintaining an optimal level of stockout risk.
+Given a CSV file named 'Inventory_Data.csv' located in the 'Data_Storage' folder, which contains columns for Product_Code, Warehouse_ID, Quantity_Shipped, Date_Shipped, and Cost_Per_Unit, can you develop an algorithm using Python that determines the optimal inventory levels for each product at each warehouse to minimize holding costs while ensuring a target stockout risk level of 5%?
+The CSV file contains historical data from the past year, including daily sales records for each product and warehouse. You should also account for seasonal fluctuations in demand and supply chain lead times.
+Your solution should include:
+- A detailed explanation of your algorithmic approach
+- Python code implementing the algorithm using libraries such as Pandas and NumPy
+- Visualizations to illustrate key findings and recommendations, including inventory levels, holding costs, and stockout risks at each warehouse
+- A new CSV file named 'Optimized_Inventory.csv' located in the same folder as the input data, containing the optimized inventory levels for each product at each warehouse
+Assume that the store operates 7 days a week,"
+81,coding,very hard and challenging for anyone but the best to solve,"Develop an AI-powered trading strategy that integrates with a cryptocurrency exchange's API. The goal is to predict price movements of Ethereum (ETH) based on historical data, sentiment analysis, and technical indicators.
+Given a dataset containing:
+- Historical ETH prices from CoinGecko API (https://api.coingecko.com/api/v3/coins/ethereum?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false)
+- Twitter data of Ethereum-related tweets using the `tweepy` library to fetch tweets via the Twitter API
+- Sentiment analysis of tweets using Natural Language Processing (NLP) techniques with `NLTK` and `spaCy`
+- Technical indicators such as Moving Averages, Relative Strength Index (RSI), and Bollinger Bands calculated using the `TA-Lib` library
+The task is to develop a Python script that:
+1. Fetches historical data from CoinGecko API and stores it in a Pandas DataFrame
+2. Collects Twitter data of Ethereum-related tweets using Tweepy and stores it in another Pandas DataFrame
+3. Performs sentiment analysis on the collected tweets and stores the results in a new column of the tweets DataFrame
+4. Calculates technical indicators for ETH prices using TA-Lib and stores them in additional columns of the historical data DataFrame
+5. Integrates historical data, sentiment analysis, and technical indicators to develop an AI-powered trading strategy that predicts price movements of Ethereum (ETH"
+82,factual,nearly impossible,"Develop an AI model that can predict the likelihood of a new material exhibiting superconductivity based on its crystal structure, atomic composition, and thermal properties.
+Given a database folder 'Superconductor_Data' containing files with names in the format '{material_id}.csv', where each csv file contains columns for:
+- Atomic Composition (elements and their percentages)
+- Crystal Structure (space group, lattice parameters, etc.)
+- Thermal Properties (heat capacity, thermal conductivity, specific heat ratio)
+Using a Python environment with libraries such as pandas, numpy, scikit-learn, and tensorflow, write an AI model that can predict the likelihood of a new material exhibiting superconductivity based on its characteristics.
+The model should be trained on a subset of 500 materials from the database and then used to predict the likelihood for all remaining materials in the database. The predicted probabilities should be outputted to a csv file called 'superconductor_likelihoods.csv' with columns for Material ID, Predicted Probability of Superconductivity, and Confidence Interval.
+Additionally, visualize the performance of the model using a confusion matrix and a ROC curve. Plot the results using matplotlib.
+### Hint:
+To solve this problem you can use techniques such as feature engineering (e.g., calculating ratios between atomic percentages), dimensionality reduction (e.g., PCA or t-SNE), and ensemble methods (e.g., random forest or gradient boosting). You may also want to consider using transfer learning with pre-trained models like VGG16 or Res"
+83,heuristics,extremely challenging but theoretically possible,"""Develop an algorithm in Python leveraging the 'scikit-learn' library to implement a fuzzy clustering approach using the Fuzzy C-Means (FCM) algorithm on high-dimensional data from a database of IoT sensors.
+The database is stored in a PostgreSQL database with the following schema:
+    CREATE TABLE Sensor_Data (
+        sensor_id SERIAL PRIMARY KEY,
+        measurement_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        temperature REAL NOT NULL,
+        humidity REAL NOT NULL,
+        pressure REAL NOT NULL
+    );
+You will need to connect to this database, retrieve all measurements for each sensor over a period of 30 days, and then apply the FCM algorithm with 5 clusters.
+After clustering, you should save the results in a new table called 'clustered_sensors' in the same PostgreSQL database. This table should contain the original sensor data along with the cluster assignment for each measurement.
+Additionally, you should visualize the clustering result using a dimensionality reduction technique (e.g., PCA or t-SNE) to better understand the structure of the high-dimensional data.
+Use the 'matplotlib' library for visualization and ensure that your code is well-documented with comments explaining the different steps.
+Assume that you have access to the PostgreSQL database credentials, and provide the necessary Python code to accomplish this task."" ### Note: The problem statement assumes prior knowledge of working with databases, clustering algorithms, and data visualization libraries in Python. It requires a comprehensive solution involving data retrieval, processing, clustering, and visualization"
+84,medical,normal regularly encountered,"**Problem Statement:**
+Develop a predictive model for identifying high-risk patients with acute kidney injury (AKI) in an intensive care unit (ICU). Given a dataset of ICU patients, including demographic information (age, sex), laboratory results (creatinine levels, urine output), and clinical data (diagnosis codes, medications), predict the likelihood of AKI within a 24-hour window.
+**Dataset:**
+The dataset is stored in a CSV file named ""icu_data.csv"" located at ""/home/medics/datasets/"". The file contains the following columns:
+- patient_id
+- age
+- sex (M/F)
+- creatinine_level
+- urine_output
+- diagnosis_codes (e.g., ICD-10 codes)
+- medications
+- admission_time
+**Task:**
+1. Import the necessary libraries, including pandas for data manipulation and scikit-learn for machine learning.
+2. Load the dataset from the specified CSV file using pandas' `read_csv()` function.
+3. Preprocess the data by handling missing values, encoding categorical variables (sex, diagnosis codes), and scaling numerical features (age, creatinine level, urine output).
+4. Split the preprocessed data into training (~70%) and testing sets (~30%).
+5. Develop a predictive model using a suitable algorithm (e.g., logistic regression, decision trees, random forest) to predict AKI within 24 hours.
+6. Evaluate the performance of the model using metrics such"
+85,science,very hard and challenging for anyone but the best to solve,"Design an AI system that can predict and forecast population growth in different regions of the world based on historical demographic data, climate patterns, urbanization trends, and economic indicators.
+**Data Availability:**
+The necessary data is stored in a database located at `/path/to/demographic_data.db` and includes:
+- Historical population counts for various countries from 1950 to 2022
+- Climate patterns (temperature, precipitation, etc.) for different regions
+- Urbanization trends (rate of urbanization, rural-urban migration)
+- Economic indicators (GDP per capita, inflation rate, etc.)
+**Goals:**
+1. **Population Growth Forecasting:** Train a machine learning model that can predict population growth rates for the next 20 years based on historical data and other influencing factors.
+2. **Regional Analysis:** Develop an AI system that can analyze population growth trends across different regions of the world (e.g., North America, Europe, Asia-Pacific).
+3. **Influencing Factors Analysis:** Investigate how climate patterns, urbanization trends, and economic indicators impact population growth rates.
+**Deliverables:**
+1. A Python script (`forecast_population_growth.py`) that uses historical data to train a machine learning model to predict population growth rates.
+2. An R script (`regional_analysis.R`) that analyzes population growth trends across different regions of the world using the trained model.
+3. A report (`population_growth_report.pdf`) detailing your findings on how climate patterns, urbanization"
+86,math,nearly impossible,"Develop an algorithm in Python using the NumPy library to solve the following complex math problem:
+Given a large dataset of 3D point cloud data stored in a CSV file named 'point_cloud_data.csv', located at '/path/to/project/data/', where each row represents a 3D point with x, y, and z coordinates, find the optimal rigid transformation (translation, rotation) that aligns this point cloud with another known point cloud stored in a separate CSV file named 'reference_point_cloud.csv' also located within the same directory.
+The reference point cloud has undergone an unknown rigid transformation and is now stored in a different coordinate system. The task involves using Principal Component Analysis (PCA) to determine the optimal alignment of these two clouds, taking into account any possible scale factors between them.
+After finding this optimal transformation matrix, apply it to the original point cloud data and output the transformed points in a new CSV file named 'aligned_point_cloud.csv', also located within the '/path/to/project/data/' directory.
+The problem requires utilizing NumPy for array operations and possibly leveraging libraries such as SciPy or scikit-image for PCA functionality. Ensure that your Python script includes comments explaining each step of the process, as this is a complex mathematical task requiring clarity in implementation details.
+### Constraints:
+- The point cloud data files are too large to fit into memory, so you must implement an efficient method for processing them in chunks.
+- You should handle any potential errors related to reading CSV files or performing PCA"
+87,coding,extremely challenging but theoretically possible,"#### Problem: Predictive Maintenance Scheduling
+In the book 'Predictive Maintenance for Industry 4.0' there is a section on using machine learning to predict equipment failure based on sensor data and historical maintenance records.
+Given a folder that contains files with the names of {equipment_id}.csv with the csv containing the columns of Date, Sensor_Readings (a comma-separated string of temperature, vibration, pressure), Maintenance_Records (a binary flag indicating whether the equipment was maintained recently) and Failure_Date (the date the equipment failed).
+Can you develop a predictive maintenance scheduling model using Python and the libraries Pandas and scikit-learn to:
+1.  Clean and preprocess the sensor data
+2.  Convert categorical variables into numerical ones
+3.  Split the dataset into training and testing sets
+4.  Train a Random Forest classifier on the preprocessed data to predict equipment failure based on historical records
+5.  Evaluate the model's performance using accuracy, precision, recall, F1-score, and confusion matrix
+6.  Use the trained model to generate a predictive maintenance schedule for the next quarter, assuming that each piece of equipment has an average usage rate of 50% per week
+7.  Save the predicted failure dates and corresponding equipment IDs in a new csv called 'maintenance_schedule.csv'
+### File paths:
+-   The folder with historical data is located at: `/Users/username/Documents/equipment_data`
+-   The trained model should be saved in the"
+88,factual,normal regularly encountered,"Implement a data warehouse ETL (Extract, Transform, Load) process in Python using the Pandas library to load customer transaction data from CSV files located in '/data/transactions' into a MySQL database named 'customer_database' on a remote server. Ensure that each transaction is assigned a unique identifier and linked to its corresponding customer ID.
+The transaction CSV files have the following structure:
+- CustomerID (str)
+- TransactionDate (datetime)
+- ProductID (int)
+- Quantity (int)
+- Price (float)
+Requirements:
+- Extract data from all CSV files in '/data/transactions' into a Pandas DataFrame.
+- Transform the data by adding a unique transaction ID and linking each transaction to its corresponding customer ID.
+- Load the transformed data into 'customer_database' table named 'transaction_log'.
+- Create indexes on CustomerID and TransactionDate for efficient querying.
+- Handle potential errors during the ETL process, such as missing or duplicate values.
+Use Python 3.7+ and the Pandas library for data manipulation. Assume that the MySQL database credentials are stored in a separate file named 'db_credentials.json' with the following format:
+```json
+{
+    ""host"": ""remote_server_ip"",
+    ""user"": ""database_username"",
+    ""password"": ""database_password"",
+    ""database"": ""customer_database""
+}
+```
+Provide a Python script that meets these requirements and includes comments for clarity. Make sure to handle potential edge cases during the ETL process.
+### Hint"
+89,heuristics,very hard and challenging for anyone but the best to solve,"**Problem: Heuristics-Based Stock Market Forecasting using Complex Network Analysis**
+In the context of complex network analysis, replicate a scenario where you apply heuristics-based forecasting to predict future stock prices based on historical data and network interactions. Given a dataset containing daily stock prices for 50 major stocks (e.g., AAPL.csv, GOOG.csv, MSFT.csv) in the 'Stock_Prices' folder, which also includes a file named 'market_network.edgelist', where each row represents an interaction between two stocks with their respective weights.
+**Dataset Description:**
+- Each CSV file contains historical daily stock prices (Date, Open, High, Low, Close, Volume).
+- The market_network.edgelist file is in the format of ""source target weight"" indicating the influence one stock has on another based on historical price movements.
+**Objective:**
+1. **Network Construction**: Use a library like NetworkX to construct an undirected weighted graph from the market_network.edgelist, where each node represents a stock and the edges represent interactions between them.
+2. **Heuristics-Based Forecasting Model**: Develop a heuristics-based forecasting model that predicts future stock prices based on the constructed network. You can use any library or framework you prefer for machine learning (e.g., scikit-learn, TensorFlow).
+3. **Feature Engineering and Selection**: Engineer features from historical data to include in your model. This could involve calculating metrics like moving averages, RSI"
+90,medical,nearly impossible,"Develop an AI system that predicts the likelihood of a patient developing sepsis within 24 hours based on their Electronic Health Record (EHR) data, including lab results, medication orders, and vital signs.
+Given a folder containing EHR data in CSV files named after the patient's Medical Record Number (MRN), e.g., ""MRN_12345.csv"", where each file contains the following columns:
+- Date
+- Time
+- Vital Signs: Blood Pressure (BP), Heart Rate (HR), Respiratory Rate (RR)
+- Lab Results: White Blood Cell Count (WBC), Platelet Count, Creatinine Level
+- Medication Orders: Antibiotics, Vasopressors
+- Other Relevant Data: Temperature, Oxygen Saturation
+Using Python with the necessary libraries (e.g., pandas, numpy, scikit-learn) and a deep learning framework like TensorFlow or PyTorch, design an AI system that:
+1. Cleans and preprocesses the EHR data, handling missing values and outliers.
+2. Extracts relevant features from the preprocessed data using techniques such as feature engineering and dimensionality reduction (e.g., PCA).
+3. Trains a predictive model on the extracted features to predict the likelihood of sepsis within 24 hours. Consider using machine learning models like Random Forest, Gradient Boosting, or neural networks.
+4. Evaluates the performance of the predictive model using metrics such as AUC-ROC and accuracy.
+5. Dep"
+91,science,extremely challenging but theoretically possible,"Develop an AI model that predicts the likelihood of a new species being discovered in a given ecosystem based on historical data from the past 50 years. The dataset 'species_discovery_data.csv' contains information about newly discovered species, including their taxonomic classification (Kingdom, Phylum, Class, Order), geographic location, and environmental conditions such as temperature, humidity, and altitude.
+The model should integrate multiple machine learning algorithms to predict the likelihood of discovery based on various factors. The goal is to create a predictive model that can be used by conservation biologists and researchers to prioritize their efforts in exploring new ecosystems for potential species discoveries.
+Assume you have access to additional datasets:
+- 'ecosystem_characteristics.csv': contains information about the characteristics of different ecosystems, such as forest type, marine ecosystem type, and soil composition.
+- 'species_classification.csv': a comprehensive database of all known species, including their taxonomic classification and ecological niches.
+- 'geographic_data.csv': contains geographic coordinates and climate data for various locations around the world.
+Using Python with libraries such as scikit-learn, pandas, and NumPy, develop an AI model that combines feature engineering, dimensionality reduction, and ensemble learning to predict the likelihood of a new species being discovered in a given ecosystem. Your solution should include:
+- A detailed description of your approach and the reasoning behind it.
+- The code for implementing each step, including data preprocessing, feature engineering, model selection, training, and evaluation."
+92,math,normal regularly encountered,"Here's a complex open-ended math problem in the field of machine learning and data analysis:
+Replicate the implementation of the Long Short-Term Memory (LSTM) Recurrent Neural Network described in the paper ""Gradient-Based Learning Applied to Document Recognition"" by Y. LeCun et al., for handwritten digit recognition using the MNIST dataset, stored locally at `~/Projects/MNIST`.
+The goal is to achieve an accuracy comparable to or better than the original 97.3% reported in the paper, utilizing a batch size of 128 and two hidden LSTM layers with 256 units each.
+Modify the code to utilize the TensorFlow library (version 2.x) for its Keras API functionality. Implement early stopping based on validation loss to prevent overfitting. Ensure that the model trains on the entire dataset without any data augmentation techniques, and save the trained model in the `~/Projects/MNIST/saved_models` directory.
+Upon successful training, create a submission file named `submission.csv` in the same directory as the script, containing the predicted labels for each image in the test set.
+Note: You are not allowed to use any pre-trained models or external libraries beyond TensorFlow 2.x. Your implementation should be self-contained and reproducible.
+**Problem Requirements:**
+* Utilize Python 3.x (preferably 3.9) as the scripting language.
+* Ensure compatibility with TensorFlow 2.x.
+* Replicate the LSTM architecture described in the paper, using"
+93,coding,very hard and challenging for anyone but the best to solve,"**Problem Title:** Dynamic Multi-Agent Route Optimization for Autonomous Vehicles in Urban Environments
+**Sector:** Coding (Python)
+**Description:**
+Consider a scenario where you are tasked with developing an algorithm for optimizing the routes of autonomous vehicles in real-time, given a dynamic urban environment. The goal is to minimize congestion and maximize the number of passengers transported within a specified time frame.
+You have been provided with:
+- A folder (`urban_traffic_data`) containing historical traffic data in CSV format, where each file represents a day's worth of traffic data for a specific road segment (`road_segment.csv`).
+- A set of autonomous vehicles' current positions and destinations stored in a JSON file (`av_positions.json`).
+- The urban environment's map data as an ESRI shapefile (`urban_map.shp`) containing information about the roads, intersections, and pedestrian zones.
+Your task is to:
+1. **Integrate the traffic data**: Load the historical traffic data from the `urban_traffic_data` folder into a Pandas dataframe, ensuring that each day's data is properly aligned with its respective road segment.
+2. **Implement dynamic programming**: Develop a dynamic programming algorithm to calculate the optimal route for each autonomous vehicle based on the current traffic conditions and the urban map data.
+3. **Account for pedestrian zones and real-time updates**: Modify the algorithm to consider pedestrian zones as areas of high priority, while also incorporating real-time updates from sensors (e.g., traffic cameras, lidar) stored in a"
+94,factual,nearly impossible,"Develop an AI system that can predict the likelihood of a bank experiencing a liquidity crisis based on historical data from various global banks. 
+The system should incorporate Natural Language Processing (NLP) techniques and machine learning algorithms to analyze financial reports, news articles, and macroeconomic indicators.
+Given a folder containing CSV files with names like 'Bank_X_Statements.csv', where each file contains the following columns:
+- 'Date': date of financial statement
+- 'Interest_Rate_Effective': effective interest rate on loans
+- 'Non-Performing_Loans': number of non-performing loans
+- 'Total_Assets': total assets of the bank
+- 'Liquidity_Coverage': liquidity coverage ratio
+And another folder containing text files named 'Bank_Y_News.txt', where each file contains news articles about a specific bank.
+The system should:
+1. Use NLP to extract relevant information from news articles, such as sentiment analysis and key phrases related to the bank's financial health.
+2. Integrate financial statement data with macroeconomic indicators (e.g., inflation rate, GDP growth rate) using a library like pandas.
+3. Train a machine learning model to predict the likelihood of a liquidity crisis based on historical data from various banks. The model should include features such as:
+	* Financial ratios (e.g., return on equity, debt-to-equity ratio)
+	* Sentiment analysis scores
+	* Macroeconomic indicators
+4. Deploy the system using Flask"
+95,heuristics,extremely challenging but theoretically possible,"**Problem: Heuristics Sector - Optimal Scheduling of Autonomous Vehicles in Dynamic Traffic Environments**
+In the book ""Intelligent Transportation Systems"" there is a section on optimal scheduling of autonomous vehicles (AVs) using reinforcement learning. Given a folder that contains files with the names of {city}_{time}.json with the json containing the following information:
+- `roads`: an array of road segments with their corresponding lengths and capacities
+- `traffic_signals`: an array of traffic signals with their corresponding timings and locations
+- `av_locations`: an array of current AV positions, speeds, and headings
+- `demand_points`: an array of demand points (e.g. pick-up/drop-off points) with their corresponding coordinates and timestamps
+Can you replicate the reinforcement learning algorithm for optimal scheduling of AVs in dynamic traffic environments using the data in the 'Traffic_Data' folder? Ideally, you should implement a Deep Deterministic Policy Gradient (DDPG) agent to learn an optimal policy that minimizes travel time and energy consumption.
+**Assumptions:**
+- The city is modeled as a graph with road segments as nodes and intersections as edges
+- AVs are equipped with sensors for real-time traffic information
+- Demand points have static coordinates but dynamic timestamps (e.g. time of day, day of week)
+**Output:**
+- Train the DDPG agent using 90% of the data in 'Traffic_Data' folder and evaluate its performance on the remaining 10"
+96,medical,normal regularly encountered,"Develop a Python script using Pandas and Scikit-learn that can automate the process of identifying outliers in patient health records stored in a CSV file named 'patient_data.csv'. The file has columns for age, weight, blood pressure, temperature, heart rate, and medical history (a binary indicator of any previous conditions). 
+The script should calculate and display the Z-score for each patient record and categorize them into three groups: normal patients (Z-scores between -2 and 2), potential outliers (Z-scores outside this range but within -3 to 3), and confirmed outliers (Z-scores below -3 or above 3). 
+Save the categorized records to a new CSV file named 'categorized_patients.csv'. The script should also calculate and display the correlation coefficient between blood pressure and heart rate, as well as between temperature and medical history.
+File Path: '/home/user/healthcare_data/patient_data.csv' 
+Assume that all data is numerical and can be treated as normally distributed. Use appropriate scaling for each feature if necessary.  Also ensure your code is readable and maintainable with clear variable names and proper comments. 
+Note: Ensure to handle any errors or missing values in the input CSV file properly, and consider using robust statistical methods when calculating Z-scores. 
+Language: Python 
+Libraries: Pandas, Scikit-learn (for Z-score calculation), NumPy (for numerical computations) 
+Framework: None required but use of"
+97,science,very hard and challenging for anyone but the best to solve,"Develop an algorithm to analyze satellite imagery data for crop health monitoring using deep learning techniques.
+Given a folder that contains GeoTIFF files with the names of {farmer_id}_crop_{crop_type}.tif, where each file represents a single image capture from a satellite, and the corresponding csv file with the name {farmer_id}_{crop_type}_metadata.csv containing information about the crop's growth stage, soil type, and weather conditions.
+Using TensorFlow 2.x as the deep learning framework, implement a model that can:
+1. Extract relevant features from the GeoTIFF images using convolutional neural networks (CNNs).
+2. Use recurrent neural networks (RNNs) to analyze the temporal dynamics of crop growth.
+3. Integrate the extracted features with the metadata information to predict crop health scores.
+Create a new csv file called 'crop_health_scores.csv' that contains the farmer_id, crop_type, and corresponding predicted crop health score for each image capture.
+Assume that there are 10 different types of crops (e.g., corn, soybeans, wheat) and 50 farmers. The satellite imagery data is collected over a period of 5 years, with approximately 100 images per year per farmer.
+Some hints to consider:
+- Use Transfer Learning from pre-trained models such as U-Net or ResNet to improve the accuracy of feature extraction.
+- Experiment with different types of RNNs (e.g., LSTM, GRU) to analyze temporal dynamics.
+- Consider"
+98,math,nearly impossible,"Create a math sector focused problem that meets the specified requirements:
+    ""In the research paper 'Quantum Information Processing with Non-Abelian Anyons' there is an equation describing the non-abelian statistics of Ising anyon excitations in a 2D topological superconductor. Given two arbitrary operators A and B in the Hilbert space of the system, can you derive the modified version of the equation using the tensor product representation of the Ising anyons and demonstrate its application to an experimental setup where the superconducting wires are placed at specific points on a hexagonal lattice? The problem requires you to use the mathematical software package Mathematica and the following libraries: LinearAlgebra, GroupTheory, Combinatorica.
+    You need to:
+    
+    1. Define the operators A and B in terms of creation and annihilation operators for the anyons.
+    2. Derive the tensor product representation of the Ising anyon excitations using the fusion rules.
+    3. Modify the equation from the research paper to include the effects of the experimental setup on the non-abelian statistics.
+    4. Implement the modified version of the equation in Mathematica and apply it to an arbitrary set of points on the hexagonal lattice.
+    The solution should result in a Mathematica notebook that contains the derivation, implementation, and application of the modified equation. Save the notebook as 'IsingAnyons.nb' in the '/Users/"
+99,coding,extremely challenging but theoretically possible,"Develop a Python script that uses the Hugging Face Transformers library to perform sentiment analysis on customer reviews from an e-commerce company's database. The reviews are stored in a PostgreSQL database with the following table schema:
+- Table name: `customer_reviews`
+- Columns:
+  - `review_id` (primary key, integer)
+  - `customer_name` (string)
+  - `review_text` (long text)
+  - `rating` (integer)
+The sentiment analysis should be performed using a pre-trained BERT model and the results should be stored in a new table called `sentiment_analysis`. The new table should have the following columns:
+- `review_id`
+- `customer_name`
+- `sentiment_score` (float, between -1 and 1)
+- `polarity` (string, either 'positive', 'negative' or 'neutral')
+Assume that you have the necessary credentials to connect to the PostgreSQL database. The Python script should be able to handle any errors that may occur during the sentiment analysis process.
+Note: You can use the following PostgreSQL connection string as an example:
+`postgresql://username:password@host:port/db_name`
+Also, ensure that the Hugging Face Transformers library is installed in your environment by running `pip install transformers` before executing the script. The script should be able to handle a large number of reviews and perform the sentiment analysis efficiently.
+### Constraints
+- The Python script should use the `transformers` library version 4"
